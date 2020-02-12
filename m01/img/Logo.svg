@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="71px" viewBox="0 0 70 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo">
+            <g>
+                <rect id="Rectangle" fill="#F6F5F5" x="0" y="0.5" width="70" height="70" rx="8"></rect>
+                <g id="C" transform="translate(29.000000, 43.500000)" fill="#1C1C1C">
+                    <rect id="Rectangle" x="0" y="0" width="12" height="4"></rect>
+                    <rect id="Rectangle-Copy-5" x="0" y="10" width="12" height="4"></rect>
+                    <rect id="Rectangle" x="0" y="0" width="5" height="14"></rect>
+                </g>
+                <g id="N&amp;I" transform="translate(14.000000, 16.000000)" fill="#1C1C1C">
+                    <rect id="Rectangle" x="0" y="11.5" width="10" height="30"></rect>
+                    <rect id="Rectangle-Copy-3" x="32" y="0.5" width="10" height="41"></rect>
+                    <rect id="Rectangle-Copy-4" transform="translate(5.000000, 5.500000) rotate(-90.000000) translate(-5.000000, -5.500000) " x="0" y="0.5" width="10" height="10"></rect>
+                    <rect id="Rectangle-Copy-4" transform="translate(26.500000, 5.500000) rotate(-90.000000) translate(-26.500000, -5.500000) " x="21.5" y="-10" width="10" height="31"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

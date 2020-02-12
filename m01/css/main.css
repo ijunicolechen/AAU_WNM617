@@ -1,0 +1,240 @@
+/* Reference - Hamburger Menu : https://codepen.io/angus/pen/gWGpOR/ */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #1C1C1C;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 100%;
+    color: #F9F9F9;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Container */
+.main-container {
+    max-width: 1440px;
+}
+
+.sub-container {
+    display: flex;
+    padding: 0px 35px;
+}
+
+.box-container {
+    height: 500px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 3.2em;
+}
+
+.sub-title {
+    font-weight: bold;
+    font-size: 2.8em;
+}
+
+/* Navigation Bar */
+.nav {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 70px;
+    height: 71px;
+    background-image: url(../img/Logo.svg);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu>li {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 1rem;
+    border: 1px solid transparent;
+}
+
+.menu>li:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #F9F9F9;
+}
+
+/* Hamburger Hidden */
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #F9F9F9;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: #1C1C1C;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* Introduction */
+.description {
+    width: 60%;
+}
+
+.content {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+}
+
+.content>div:first-child {
+    margin-top: auto;
+}
+
+.profile-pic {
+    width: 40%;
+    padding: 4% 5%;
+
+}
+
+.profile-img {
+    height: 100%;
+    background: url(../img/profile.JPG) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Responsive 700px*/
+@media (max-width: 800px) {
+    .title {
+        font-size: 2.7em;
+    }
+
+    .sub-title {
+        font-size: 2.2em;
+    }
+
+    .sub-container {
+        flex-wrap: wrap;
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 100px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: #F9F9F9;
+        background-color: #1C1C1C;
+    }
+
+    #menu-toggle:checked~.menu {
+        height: 100%;
+    }
+
+    #menu-toggle~.menu li {
+        display: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        display: flex;
+        border-bottom: 1px solid rgb(196, 194, 194);
+        height: 2.5em;
+        padding: 0.5em;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 2.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu>li:first-child {
+        border-top: 1px solid rgb(196, 194, 194);
+    }
+
+    #menu-toggle:checked~.menu>li:hover {
+        color: #1C1C1C;
+        background-color: #F9F9F9;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .profile-pic {
+        display: none;
+    }
+
+    .content>div:first-child {
+        margin-top: 10%;
+    }
+}

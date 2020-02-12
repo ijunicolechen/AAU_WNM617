@@ -1,0 +1,75 @@
+/* 
+    Require: Not allow to touch HTML file and Main CSS file 
+    Not allow:
+    1. Add class name or change class name
+    2. Change element
+    3. Add Image
+    
+    Allow:
+    1. Change Design
+    
+    ** Using theme css to create a new design
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    cursor: default;
+}
+
+:root {
+    --color-light: #fdfdfd;
+    --color-dark: #1c1c1c;
+}
+
+body {
+    margin: 0;
+    color: var(--color-light);
+    font-size: 100%;
+    font-family: "Quicksand", Helvetica, sans-serif;
+    background-color: #1c1c1c;
+}
+
+.header-container,
+.main-container,
+.footer-container {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 1rem;
+}
+
+nav ul li a {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--color-light);
+    text-decoration: none;
+    text-align: center;
+}
+
+li a:hover {
+    font-weight: bold;
+    text-decoration: underline var(--color-light) solid;
+}

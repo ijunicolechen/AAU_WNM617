@@ -1,0 +1,157 @@
+/* ELEMENTS RESETS */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-neutral-dark: #2e3434;
+    --color-neutral-medium: #a7dcff;
+    --color-neutral-light: #e6ebeb;
+
+    --header-height: 3rem;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: helvetica, arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: georgia, "Times New Roman", serif;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* SMALL CLASSES */
+
+.container {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* ATOMIC CLASSES */
+
+.display-flex {
+    display: flex;
+}
+
+.display-inline-flex {
+    display: inline-flex;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.flex-stretch {
+    flex: 1 1 auto;
+}
+
+.flex-none {
+    flex: none;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* COMPONENT CLASSES */
+
+.navbar {
+    background-color: var(--color-neutral-dark);
+    color: var(--color-neutral-medium);
+    line-height: var(--header-height);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.navbar a {
+    padding: 0 1em;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+
+
+@media (max-width:1000px) {
+    .navbar h1 {
+        padding-left: 1em;
+    }
+
+    .article {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+}
+
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .navbar>.display-flex {
+        flex-wrap: wrap;
+    }
+
+    .menu-button {
+        display: block;
+        padding: 0 1em;
+    }
+
+    .navbar .nav {
+        display: none;
+    }
+
+    #menu:checked+.navbar .nav {
+        display: block;
+        width: 100%;
+    }
+
+    #menu:checked+.navbar .nav ul {
+        display: block;
+        line-height: 2rem;
+    }
+}
