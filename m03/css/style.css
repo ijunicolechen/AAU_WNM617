@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+:root {
+    --color-main: blue;
+}
+
+/* Accordion */
+.accordion dt {
+    background-color: var(--color-main);
+    padding: .2em .5em;
+    color: white;
+}
+
+.accordion dt~dt {
+    margin-top: 1em;
+}
+
+.accordion dd {
+    border: 2px solid var(--color-main);
+    padding: 1em;
+    margin-left: 0;
+    border-top-width: 0;
+}
