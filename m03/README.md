@@ -14,6 +14,9 @@ Statement of Intent - why is necessary? why it need to be? - Design Guide: Color
 
 - Pdf that don't need to explain
 - elevator pitch :
+
   - 3 to 5 sentence
   - clear and quick convince
   - Just enough to let someone ask question
+
+\*\* Personal action at different location
