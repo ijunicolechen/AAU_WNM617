@@ -15,17 +15,91 @@
 /* Accordion */
 .accordion dt {
     background-color: var(--color-main);
-    padding: .2em .5em;
+    padding: .2em calc(2px+1em);
     color: white;
+    position: relative;
 }
 
 .accordion dt~dt {
     margin-top: 1em;
 }
 
+.accordion dt::after {
+    content: ">";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+}
+
+.accordion dt.active::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
 .accordion dd {
+    display: none;
     border: 2px solid var(--color-main);
     padding: 1em;
     margin-left: 0;
     border-top-width: 0;
+}
+
+/* Tab Group */
+.tabgroup {
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    cursor: default;
+    line-height: 3em;
+    text-align: center;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-main);
+    transition: all .3s;
+}
+
+.tab.active::after {
+    height: 3px;
+}
+
+.contents {
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.content.active {
+    opacity: 1;
+    pointer-events: initial;
 }
