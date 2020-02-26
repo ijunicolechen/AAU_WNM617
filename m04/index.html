@@ -14,7 +14,84 @@
 </head>
 
 <body>
-
+    <section data-role="page" id="login-page">
+        <div data-role="main">
+            <form>
+                <!-- data-role="none" get rid of jquery mobile ui-->
+                <input type="text" placeholder="Username" data-role="none">
+                <input type="password" placeholder="Password" data-role="none">
+                <div>
+                    <a href="">Login</a>
+                </div>
+            </form>
+        </div>
+        <footer data-role="footer">
+            <h1>Navigation</h1>
+        </footer>
+    </section>
+    <section data-role="page" id="recent-page">
+        <header data-role="header">
+            <h1>Recent Locations</h1>
+        </header>
+        <div data-role="main">
+            MAP
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#recent-page">Recent</a></li>
+                <li><a href="#list-page">List</a></li>
+                <li><a href="#profile-page">Profile</a></li>
+            </ul>
+        </footer>
+    </section>
+    <section data-role="page" id="list-page">
+        <header data-role="header">
+            <h1>List</h1>
+            <ul>
+                <li class="flex-stretch"></li>
+                <li class="flex-none">
+                    <a href="#">Add</a>
+                </li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <ul>
+                <li>Cats</li>
+                <li>Cats</li>
+                <li>Cats</li>
+                <li>Cats</li>
+                <li>Cats</li>
+            </ul>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#recent-page">Recent</a></li>
+                <li><a href="#list-page">List</a></li>
+                <li><a href="#profile-page">Profile</a></li>
+            </ul>
+        </footer>
+    </section>
+    <section data-role="page" id="profile-page">
+        <header data-role="header">
+            <h1>User Profile</h1>
+        </header>
+        <div data-role="main">
+            <ul>
+                <li>Category</li>
+                <li>Category</li>
+                <li>Category</li>
+                <li>Category</li>
+                <li>Category</li>
+            </ul>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#recent-page">Recent</a></li>
+                <li><a href="#list-page">List</a></li>
+                <li><a href="#profile-page">Profile</a></li>
+            </ul>
+        </footer>
+    </section>
 </body>
 
 </html>
