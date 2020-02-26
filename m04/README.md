@@ -1,3 +1,16 @@
+Note :
+chrome developer device dimensions
+
 Assignment
 
-Profile need to be two page - Display - Edit
+Log In
+Sign Up
+User Profile need to be two pages
+
+- Display
+- Edit
+
+Animal
+
+- List
+- Profile
