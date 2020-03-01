@@ -13,29 +13,270 @@
     <script type="text/javascript" src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
-<body>
+<body class="dark-theme">
     <section data-role="page" id="loginPage">
-        <header data-role="header">
-            <h1>Log In</h1>
-        </header>
         <div data-role="main">
-            <div class="logoImg"></div>
-            <div class="formLogin">
-                <div class="formBox">
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
+            <div class="container  margin-left-auto margin-right-auto">
+                <div class="logo-img">
+                    <img src="img/icon/Logo_v1.png">
                 </div>
-                <div class="buttonBox">
-                    <button type="submit">Log In</button>
+                <form class="form" id="loginForm">
+                    <div class="form-box display-flex">
+                        <div class="icon-box  margin-bottom-auto margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="userIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class="userIcon-fill"
+                                        d="M21.5,8 C23.1587285,8 24.6916896,8.5384745 25.9336136,9.45015395 L28.4513041,8.4510659 L27.9044942,11.5950486 C28.5994938,12.7324805 29,14.0694686 29,15.5 C29,19.6421356 25.6421356,23 21.5,23 C17.3578644,23 14,19.6421356 14,15.5 C14,14.3937905 14.239491,13.3435172 14.6694525,12.3982006 L14,8 L17.2042442,9.35132626 C18.420962,8.49968828 19.9021268,8 21.5,8 Z"
+                                        id="Combined-Shape" fill="#D8D8D8"></path>
+                                    <circle class="userIcon-fill" id="Oval-Copy" fill="#D8D8D8" cx="21.5" cy="40.5"
+                                        r="15.5">
+                                    </circle>
+                                    <path class="userIcon-stroke"
+                                        d="M35,39 C40.3333333,39 41.6666667,37 39,33 C35,27 34,26 36,22" id="Path"
+                                        stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box  margin-bottom-auto margin-top-auto">
+                            <input class="form-input" type="text" id="loginUser" data-role="none" required>
+                            <label class="form-label" for="loginUser">
+                                <span class="content-text">Username</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-box display-flex">
+                        <div class="icon-box  margin-bottom-auto margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Password_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="passwordIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group" transform="translate(12.000000, 1.000000)" fill="#D8D8D8">
+                                        <path class="passIcon-fill"
+                                            d="M9.5,0 C11.6011899,0 13.543054,0.68215454 15.116211,1.83708219 L18.3049851,0.571350134 L17.6121244,4.55334363 C18.4926018,5.9941739 19,7.68783235 19,9.5 C19,14.7467051 14.7467051,19 9.5,19 C4.25329488,19 0,14.7467051 0,9.5 C0,8.09942295 0.30308622,6.76963548 0.847248441,5.57264781 L3.68594044e-14,3.64153152e-14 L4.0577756,1.71233361 C5.59912735,0.633194182 7.47561846,0 9.5,0 Z M9.5,2.53333333 C5.65241624,2.53333333 2.53333333,5.65241624 2.53333333,9.5 C2.53333333,13.3475838 5.65241624,16.4666667 9.5,16.4666667 C13.3475838,16.4666667 16.4666667,13.3475838 16.4666667,9.5 C16.4666667,5.65241624 13.3475838,2.53333333 9.5,2.53333333 Z"
+                                            id="Combined-Shape"></path>
+                                        <rect class="passIcon-fill" id="Rectangle" x="8" y="17" width="4" height="23"
+                                            rx="1.5"></rect>
+                                        <path class="passIcon-fill"
+                                            d="M12.5,32 L13.5,32 C14.3284271,32 15,32.6715729 15,33.5 L15,36.5 C15,37.3284271 14.3284271,38 13.5,38 L12.5,38 C11.6715729,38 11,37.3284271 11,36.5 L11,33.5 C11,32.6715729 11.6715729,32 12.5,32 Z"
+                                            id="Rectangle-Copy"
+                                            transform="translate(13.000000, 35.000000) rotate(-90.000000) translate(-13.000000, -35.000000) ">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box  margin-bottom-auto margin-top-auto">
+                            <input class="form-input" type="text" id="loginPass" data-role="none" required>
+                            <label class="form-label" for="loginPass">
+                                <span class="content-text">Password</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <div class="button-box">
+                    <button class="submit-button">Log In</button>
+                </div>
+                <div class="content-box">
+                    <a href="#forgetpassPage">
+                        <h4>Forget username/password?</h4>
+                    </a>
+                </div>
+                <div class="content-box bottom-box">
+                    <a href="#signupPage">
+                        <h4>Do not have an account? <span>Sing Up</span></h4>
+                    </a>
+                    <hr>
                 </div>
             </div>
         </div>
     </section>
     <section data-role="page" id="signupPage">
-
+        <div data-role="main">
+            <div class="container margin-left-auto margin-right-auto">
+                <div class="logo-img">
+                    <img src="img/icon/Logo_v1.png">
+                </div>
+                <form class="form" id="loginForm">
+                    <div class="form-box display-flex">
+                        <div class="icon-box margin-top-auto margin-bottom-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Email_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="emailIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <polygon class="emailIcon-fill" id="Triangle" fill="#D8D8D8"
+                                        points="8.18091808 7 11.3333333 12.6576519 5 12.6576519"></polygon>
+                                    <polygon class="emailIcon-fill" id="Triangle-Copy" fill="#D8D8D8"
+                                        points="33.5279233 6.93196615 36.6803385 12.589618 30.3470052 12.589618">
+                                    </polygon>
+                                    <rect class="emailIcon-stroke" id="Rectangle" stroke="#D8D8D8" stroke-width="2"
+                                        x="2" y="13" width="38" height="23" rx="1.5"></rect>
+                                    <line class="emailIcon-stroke" x1="8.5" y1="13.5" x2="21.5" y2="23.5" id="Line"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+                                    <line class="emailIcon-stroke" x1="21.5" y1="23.5" x2="33.5" y2="13.5" id="Line-2"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box margin-bottom-auto margin-top-auto">
+                            <input class="form-input" type="text" id="signupEmail" data-role="none" required>
+                            <label class="form-label" for="signupEmail">
+                                <span class="content-text">Email</span>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+                    <div class="form-box display-flex">
+                        <div class="icon-box  margin-bottom-auto margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="userIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class="userIcon-fill"
+                                        d="M21.5,8 C23.1587285,8 24.6916896,8.5384745 25.9336136,9.45015395 L28.4513041,8.4510659 L27.9044942,11.5950486 C28.5994938,12.7324805 29,14.0694686 29,15.5 C29,19.6421356 25.6421356,23 21.5,23 C17.3578644,23 14,19.6421356 14,15.5 C14,14.3937905 14.239491,13.3435172 14.6694525,12.3982006 L14,8 L17.2042442,9.35132626 C18.420962,8.49968828 19.9021268,8 21.5,8 Z"
+                                        id="Combined-Shape" fill="#D8D8D8"></path>
+                                    <circle class="userIcon-fill" id="Oval-Copy" fill="#D8D8D8" cx="21.5" cy="40.5"
+                                        r="15.5">
+                                    </circle>
+                                    <path class="userIcon-stroke"
+                                        d="M35,39 C40.3333333,39 41.6666667,37 39,33 C35,27 34,26 36,22" id="Path"
+                                        stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box  margin-bottom-auto margin-top-auto">
+                            <input class="form-input" type="text" id="signupUser" data-role="none" required>
+                            <label class="form-label" for="signupUser">
+                                <span class="content-text">Username</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-box display-flex">
+                        <div class="icon-box  margin-bottom-auto margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Password_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="passwordIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group" transform="translate(12.000000, 1.000000)" fill="#D8D8D8">
+                                        <path class="passIcon-fill"
+                                            d="M9.5,0 C11.6011899,0 13.543054,0.68215454 15.116211,1.83708219 L18.3049851,0.571350134 L17.6121244,4.55334363 C18.4926018,5.9941739 19,7.68783235 19,9.5 C19,14.7467051 14.7467051,19 9.5,19 C4.25329488,19 0,14.7467051 0,9.5 C0,8.09942295 0.30308622,6.76963548 0.847248441,5.57264781 L3.68594044e-14,3.64153152e-14 L4.0577756,1.71233361 C5.59912735,0.633194182 7.47561846,0 9.5,0 Z M9.5,2.53333333 C5.65241624,2.53333333 2.53333333,5.65241624 2.53333333,9.5 C2.53333333,13.3475838 5.65241624,16.4666667 9.5,16.4666667 C13.3475838,16.4666667 16.4666667,13.3475838 16.4666667,9.5 C16.4666667,5.65241624 13.3475838,2.53333333 9.5,2.53333333 Z"
+                                            id="Combined-Shape"></path>
+                                        <rect class="passIcon-fill" id="Rectangle" x="8" y="17" width="4" height="23"
+                                            rx="1.5"></rect>
+                                        <path class="passIcon-fill"
+                                            d="M12.5,32 L13.5,32 C14.3284271,32 15,32.6715729 15,33.5 L15,36.5 C15,37.3284271 14.3284271,38 13.5,38 L12.5,38 C11.6715729,38 11,37.3284271 11,36.5 L11,33.5 C11,32.6715729 11.6715729,32 12.5,32 Z"
+                                            id="Rectangle-Copy"
+                                            transform="translate(13.000000, 35.000000) rotate(-90.000000) translate(-13.000000, -35.000000) ">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box  margin-bottom-auto margin-top-auto">
+                            <input class="form-input" type="text" id="signupPass" data-role="none" required>
+                            <label class="form-label" for="signupPass">
+                                <span class="content-text">Password</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <div class="button-box">
+                    <button class="submit-button">Sign Up</button>
+                </div>
+                <div class="content-box bottom-box">
+                    <a href="#loginPage">
+                        <h4>Already have an account? <span>Log In</span></h4>
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="forgetpassPage">
+        <div data-role="main">
+            <div class="container margin-left-auto margin-right-auto">
+                <div class="logo-img">
+                    <img src="img/icon/Logo_v1.png">
+                </div>
+                <div class="form-container">
+                    <div class="forgetPass-text content-box">
+                        <h2 class="text-center">Password Assistance</h2>
+                        <p class="description-text">Enter the email address or mobile phone number associated with your
+                            Amazon account.</p>
+                    </div>
+                    <form class="form" id="loginForm">
+                        <div class="form-box display-flex">
+                            <div class="icon-box margin-top-auto margin-bottom-auto">
+                                <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                    <title>Email_icon</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="emailIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <polygon class="emailIcon-fill" id="Triangle" fill="#D8D8D8"
+                                            points="8.18091808 7 11.3333333 12.6576519 5 12.6576519"></polygon>
+                                        <polygon class="emailIcon-fill" id="Triangle-Copy" fill="#D8D8D8"
+                                            points="33.5279233 6.93196615 36.6803385 12.589618 30.3470052 12.589618">
+                                        </polygon>
+                                        <rect class="emailIcon-stroke" id="Rectangle" stroke="#D8D8D8" stroke-width="2"
+                                            x="2" y="13" width="38" height="23" rx="1.5"></rect>
+                                        <line class="emailIcon-stroke" x1="8.5" y1="13.5" x2="21.5" y2="23.5" id="Line"
+                                            stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+                                        <line class="emailIcon-stroke" x1="21.5" y1="23.5" x2="33.5" y2="13.5"
+                                            id="Line-2" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square">
+                                        </line>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="input-box margin-bottom-auto margin-top-auto">
+                                <input class="form-input" type="text" id="signupEmail" data-role="none" required>
+                                <label class="form-label" for="signupEmail">
+                                    <span class="content-text">Email</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="button-box">
+                        <button class="submit-button">Continue</button>
+                    </div>
+                </div>
+                <div class="msg-container display-none">
+                    <div class="msg-box margin-left-auto margin-right-auto">
+                        <h2 class="text-center">Congratulations!</h2>
+                        <p>We send you your password to your email. <br>
+                            Please check your email.</p>
+                    </div>
+                </div>
+                <div class="content-box bottom-box">
+                    <a href="#loginPage">
+                        <h4>Remember your password? <span>Log In</span></h4>
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </div>
     </section>
     <section data-role="page" id="locationPage">
+        <header data-role="header">
+            <h1>Log In</h1>
+        </header>
+        <div data-role="main">
 
+        </div>
+        <footer data-role="footer">
+
+        </footer>
     </section>
     <section data-role="page" id="breedPage">
 
