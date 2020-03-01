@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+
+/* Global Setting */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Height */
+    --header-height: 3rem;
+
+    /* Color Basic */
+    --colorBasic-Black: #222222;
+    --colorBasic-White: #eeeeee;
+    --colorBasic-Lightblue: rgb(151, 224, 248);
+
+    /* Color Notify */
+    --colorError-Flamingo: #E8583C;
+    --colorMsgBackground-Black: rgba(34, 34, 34, .8);
+    --colorMsgBackground-White: rgba(238, 238, 238, .8);
+
+    /* Color Scheme */
+    --colorScheme-Eborry: #292726;
+    --colorScheme-Gray: #83808B;
+    --colorScheme-Lavender: #BDB7BD;
+    --colorScheme-Cinnamon: #894821;
+    --colorScheme-Orange: #e5b078;
+    --colorScheme-Fawn: #e9d0bc;
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-family: 'Livvic', 'Montserrat', Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+a {
+    color: var(--colorScheme-Lavender);
+    text-decoration: none;
+}
+
+.dark-theme {
+    background-color: var(--colorScheme-Eborry);
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-stretch {
+    flex: 1 1 auto;
+}
+
+.flex-none {
+    flex: none;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.margin-right-auto {
+    margin-right: auto;
+}
+
+.margin-top-auto {
+    margin-top: auto;
+}
+
+.margin-bottom-auto {
+    margin-bottom: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.content-box {
+    color: var(--colorScheme-Lavender);
+    text-align: center;
+}
+
+.description-text {
+    text-align: left;
+    font-size: 0.8125rem;
+    margin: .5em 0;
+}
+
+.submit-button {
+    font-family: 'Livvic', Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--colorScheme-Cinnamon);
+    border-radius: 1.5em;
+    background-color: var(--colorScheme-Orange);
+    border: none;
+    padding: .5em 1em;
+}
+
+.msg-box {
+    color: var(--colorScheme-Fawn);
+}
+
+
+/* jQuery mobile css modify */
+.ui-mobile .ui-page-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+[data-role='main'] {
+    flex: 1 1 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+[data-role="header"],
+[data-role="footer"] {
+    height: var(--header-height);
+    line-height: var(--header-height);
+    background-color: white;
+    border-width: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 2;
+}
+
+.ui-header .ui-title,
+.ui-footer .ui-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Login / Sign up / Forget password Page */
+.container {
+    width: 90%;
+}
+
+.logo-img {
+    padding: 3em 0;
+    text-align: center;
+}
+
+.logo-img img {
+    max-width: calc(100% - 6em);
+}
+
+.form-box {
+    width: 100%;
+    height: 4em;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: .5em;
+}
+
+.icon-box {
+    width: 2em;
+    height: 2em;
+}
+
+.userIcon-fill,
+.passIcon-fill,
+.emailIcon-fill {
+    fill: var(--colorScheme-Orange);
+}
+
+.userIcon-stroke,
+.emailIcon-stroke {
+    stroke: var(--colorScheme-Orange);
+}
+
+.input-box {
+    width: calc(100% - 2.5em);
+    height: calc(100% - .6em);
+    color: var(--colorBasic-White);
+    font-size: 1.25rem;
+    overflow: hidden;
+}
+
+.input-box .ui-input-text {
+    border-width: 0;
+    border-style: none;
+}
+
+.form-input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--colorScheme-Orange);
+}
+
+.form-label {
+    color: var(--colorScheme-Lavender);
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    height: 100%;
+    pointer-events: none;
+    transition: all .1s ease-out;
+}
+
+input[type="text"].form-input {
+    color: var(--colorScheme-Fawn);
+    padding-top: 15px;
+    font-size: 1.2em;
+    display: block;
+    box-sizing: border-box;
+}
+
+
+input[type="text"].form-input:focus~label,
+input[type="text"].form-input:valid~label {
+    color: var(--colorScheme-Orange);
+    font-size: .55rem;
+}
+
+input[type="text"].form-input:focus~label .content-text,
+input[type="text"].form-input:valid~label .content-text {
+    transform: translateY(-100%);
+}
+
+.content-text {
+    position: absolute;
+    font-size: 1.25rem;
+    top: 40%;
+    transition: all 0.3s ease;
+}
+
+.form-label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.button-box {
+    margin-top: 1.5em;
+}
+
+
+
+.bottom-box {
+    position: absolute;
+    bottom: .5em;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom-box a span {
+    color: var(--colorScheme-Fawn);
+}
+
+.bottom-box hr {
+    margin: 0;
+    border-bottom: 2px solid var(--colorScheme-Fawn);
+    animation: meteor 2s infinite ease-in-out;
+}
+
+.forgetPass-text {
+    padding: .5em;
+}
+
+.forgetPass-text h2 {
+    text-align: left;
+}
+
+/* Animation */
+@keyframes meteor {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
