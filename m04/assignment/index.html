@@ -80,7 +80,9 @@
                     </div>
                 </form>
                 <div class="button-box">
-                    <button class="submit-button">Log In</button>
+                    <a href="#mapPage">
+                        <button class="submit-button">Log In</button>
+                    </a>
                 </div>
                 <div class="content-box">
                     <a href="#forgetpassPage">
@@ -267,29 +269,421 @@
             </div>
         </div>
     </section>
-    <section data-role="page" id="locationPage">
+    <section data-role="page" id="mapPage">
         <header data-role="header">
-            <h1>Log In</h1>
+            <h1>Latest Report</h1>
         </header>
         <div data-role="main">
-
+            <div id="googleMap"></div>
+            <div class="addCat-icon">
+                <a href="#breedPage">
+                    <div class="addCat-circle">
+                        <div class="addCat-plus"></div>
+                    </div>
+                </a>
+            </div>
         </div>
         <footer data-role="footer">
-
+            <ul>
+                <li><a href="#collectPage">Collection</a></li>
+                <li><a href="#mapPage">Map</a></li>
+                <li><a href="#profileDisplayPage">Profile</a></li>
+            </ul>
         </footer>
     </section>
     <section data-role="page" id="breedPage">
+        <header data-role="header">
+            <h1>Breed</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#back" data-rel="back"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="main">
+            <div class="breed-container display-flex scrolling">
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Create New</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="breed-box">
+                    <a href="#addcatPage">
+                        <div class="breed-content">
+                            <div class="breedImg-set">
+                                <div class="breedImg-single">
+                                    <img src="img/breed/example.png">
+                                </div>
+                                <div class="breed-title">
+                                    <h3>Mixture</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#collectPage">Collection</a></li>
+                <li><a href="#mapPage">Map</a></li>
+                <li><a href="#profileDisplayPage">Profile</a></li>
+            </ul>
+        </footer>
+    </section>
+    <section data-role="page" id="collectPage">
+        <header data-role="header">
+            <h1>Collection</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#back" data-rel="back"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="main">
+            <div class="breed-container display-flex scrolling">
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Mixture</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Tuxedo</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Snowshoe</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>York Chocolate</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Tonkinese</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Silver</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Pixiebob</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Russian Blue</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Tabby</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Tortoiseshell</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breed-box">
+                    <div class="breed-content">
+                        <div class="breedImg-set">
+                            <div class="breedImg-single">
+                                <img src="img/breed/example.png">
+                            </div>
+                            <div class="breed-title">
+                                <h3>Calico</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addCat-icon">
+                <a href="#breedPage">
+                    <div class="addCat-circle">
+                        <div class="addCat-plus"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#collectPage">Collection</a></li>
+                <li><a href="#mapPage">Map</a></li>
+                <li><a href="#profileDisplayPage">Profile</a></li>
+            </ul>
+        </footer>
+    </section>
+    <section data-role="page" id="addcatPage">
+        <header data-role="header">
+            <h1>Add Cat</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#back" data-rel="back"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="main">
+            <div class="container margin-left-auto margin-right-auto">
+                <div class="upload-box margin-left-auto margin-right-auto">
+                    <div class="upload-icon">Upload Photo</div>
+                </div>
+                <div class="form-box">
+                    <form class="info-content">
+                    </form>
+                </div>
+            </div>
+
+        </div>
     </section>
     <section data-role="page" id="catsInfoPage">
 
     </section>
     <section data-role="page" id="profileDisplayPage">
+        <header data-role="header">
+            <h1>Profile</h1>
+        </header>
+        <div data-role="main">
+            <div class="container margin-left-auto margin-right-auto">
 
+            </div>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#collectPage">Collection</a></li>
+                <li><a href="#mapPage">Map</a></li>
+                <li><a href="#profileDisplayPage">Profile</a></li>
+            </ul>
+        </footer>
     </section>
-    <section data-role="page" id="profileEditPage">
+    <script>
+        var map;
 
-    </section>
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('googleMap'), {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                },
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0inV_NBTlJ58jrlq3NOWnFRT9ckn42EI&callback=initMap"
+        async defer></script>
 </body>
 
 </html>
