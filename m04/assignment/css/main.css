@@ -11,7 +11,7 @@
 :root {
     /* Height */
     --header-height: 3rem;
-    --footer-height: 3.75rem;
+    --footer-height: 3.5rem;
 
     /* Color Basic */
     --colorBasic-Black: #222222;
@@ -129,6 +129,22 @@ a {
     overflow: scroll;
 }
 
+.icon-fill {
+    fill: var(--colorScheme-Orange);
+}
+
+.icon-stroke {
+    stroke: var(--colorScheme-Orange);
+}
+
+.icon-fill.inactive {
+    fill: var(--colorScheme-Fawn);
+}
+
+.icon-stroke.inactive {
+    stroke: var(--colorScheme-Fawn);
+}
+
 /* jQuery mobile css modify */
 .ui-mobile .ui-page-active {
     position: fixed;
@@ -238,17 +254,6 @@ a {
     height: 2rem;
 }
 
-.userIcon-fill,
-.passIcon-fill,
-.emailIcon-fill {
-    fill: var(--colorScheme-Orange);
-}
-
-.userIcon-stroke,
-.emailIcon-stroke {
-    stroke: var(--colorScheme-Orange);
-}
-
 .input-box {
     width: calc(100% - 2.5rem);
     height: calc(100% - .6rem);
@@ -293,18 +298,19 @@ input[type="text"].form-input {
 input[type="text"].form-input:focus~label,
 input[type="text"].form-input:valid~label {
     color: var(--colorScheme-Orange);
-    font-size: .55rem;
+
 }
 
 input[type="text"].form-input:focus~label .content-text,
 input[type="text"].form-input:valid~label .content-text {
+    font-size: .8rem;
     transform: translateY(-100%);
 }
 
 .content-text {
     position: absolute;
-    font-size: 1.25rem;
-    top: 40%;
+    font-size: 1.4rem;
+    top: 50%;
     transition: all 0.3s ease;
 }
 
@@ -471,6 +477,25 @@ input[type="text"].form-input:valid~label .content-text {
     color: var(--colorScheme-Lavender);
     background-color: var(--colorScheme-Eborry);
     opacity: .8;
+}
+
+.footerIcon-box {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.footer-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-text {
+    font-size: .625rem;
+    line-height: 1rem;
+}
+
+.icon-text.active {
+    color: var(--colorScheme-Orange);
 }
 
 /* Add Cat Page */
