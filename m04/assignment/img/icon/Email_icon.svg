@@ -4,10 +4,12 @@
     <title>Email_icon</title>
     <desc>Created with Sketch.</desc>
     <g id="Email_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Triangle" fill="#D8D8D8" points="8.18091808 7 11.3333333 12.6576519 5 12.6576519"></polygon>
-        <polygon id="Triangle-Copy" fill="#D8D8D8" points="33.5279233 6.93196615 36.6803385 12.589618 30.3470052 12.589618"></polygon>
-        <rect id="Rectangle" stroke="#D8D8D8" stroke-width="2" x="2" y="13" width="38" height="23" rx="1.5"></rect>
-        <line x1="8.5" y1="13.5" x2="21.5" y2="23.5" id="Line" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
-        <line x1="21.5" y1="23.5" x2="33.5" y2="13.5" id="Line-2" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+        <g id="Group" transform="translate(2.000000, 4.931966)">
+            <polygon id="Triangle" fill="#D8D8D8" points="6.01350134 0.0680338542 9 6.06803385 3 6.06803385"></polygon>
+            <polygon id="Triangle-Copy" fill="#D8D8D8" points="32.0135013 0.0680338542 35 6.06803385 29 6.06803385"></polygon>
+            <rect id="Rectangle" stroke="#D8D8D8" stroke-width="2" x="0" y="7.06803385" width="38" height="27" rx="1.5"></rect>
+            <line x1="6.5" y1="7.65894295" x2="19.5" y2="19.4771248" id="Line" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+            <line x1="19.5" y1="19.4771248" x2="31.5" y2="7.65894295" id="Line-2" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+        </g>
     </g>
 </svg>
