@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Email_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Email_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(2.000000, 4.931966)">
+            <polygon id="Triangle" fill="#D8D8D8" points="6.01350134 0.0680338542 9 6.06803385 3 6.06803385"></polygon>
+            <polygon id="Triangle-Copy" fill="#D8D8D8" points="32.0135013 0.0680338542 35 6.06803385 29 6.06803385"></polygon>
+            <rect id="Rectangle" stroke="#D8D8D8" stroke-width="2" x="0" y="7.06803385" width="38" height="27" rx="1.5"></rect>
+            <line x1="6.5" y1="7.65894295" x2="19.5" y2="19.4771248" id="Line" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+            <line x1="19.5" y1="19.4771248" x2="31.5" y2="7.65894295" id="Line-2" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+        </g>
+    </g>
+</svg>
