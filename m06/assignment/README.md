@@ -23,3 +23,8 @@
 **Notify Color**
 
 - Flamingo: #E8583C; // Error
+
+** Midterm **
+
+- A working prototype
+- All page should be set up
