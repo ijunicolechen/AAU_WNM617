@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Map_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Map_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(3.000000, 4.000000)" stroke="#D8D8D8" stroke-linejoin="round" stroke-width="2">
+            <polygon id="Rectangle" points="0 1 12 3 12 34 0 32"></polygon>
+            <polygon id="Rectangle-Copy" points="12 3 24 0 24 31 12 34"></polygon>
+            <polygon id="Rectangle-Copy-2" points="24 0 37 2 37 33 24 31"></polygon>
+        </g>
+        <g id="Group-2" transform="translate(35.000000, 18.000000)" stroke="#D8D8D8" stroke-width="0.3">
+            <circle id="Oval" transform="translate(1.891229, 3.902726) rotate(88.000000) translate(-1.891229, -3.902726) " cx="1.89122944" cy="3.90272618" r="1"></circle>
+            <circle id="Oval-Copy" transform="translate(1.208912, 2.476387) rotate(88.000000) translate(-1.208912, -2.476387) " cx="1.20891179" cy="2.47638729" r="1"></circle>
+            <circle id="Oval-Copy-2" transform="translate(2.622910, 2.501069) rotate(88.000000) translate(-2.622910, -2.501069) " cx="2.62290996" cy="2.50106872" r="1"></circle>
+            <circle id="Oval-Copy-3" transform="translate(3.317568, 3.220409) rotate(88.000000) translate(-3.317568, -3.220409) " cx="3.31756833" cy="3.22040852" r="1"></circle>
+            <circle id="Oval-Copy-4" transform="translate(3.292887, 4.634407) rotate(88.000000) translate(-3.292887, -4.634407) " cx="3.2928869" cy="4.63440669" r="1"></circle>
+        </g>
+        <path d="M3,20 L15,26 L27,18 L37,24" id="Path-5" stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,5"></path>
+    </g>
+</svg>

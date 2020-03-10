@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>user_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="user_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M21.5,4 C23.1587285,4 24.6916896,4.5384745 25.9336136,5.45015395 L28.4513041,4.4510659 L27.9044942,7.59504861 C28.5994938,8.7324805 29,10.0694686 29,11.5 C29,15.6421356 25.6421356,19 21.5,19 C17.3578644,19 14,15.6421356 14,11.5 C14,10.3937905 14.239491,9.34351716 14.6694525,8.39820059 L14,4 L17.2042442,5.35132626 C18.420962,4.49968828 19.9021268,4 21.5,4 Z" id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+        <path d="M33.7476556,48.0009122 C30.9119101,51.6511971 26.4802512,54 21.5,54 C16.5197488,54 12.0880899,51.6511971 9.25234442,48.0009122 Z M21.5,23 C30.0604136,23 37,29.9395864 37,38.5 C37,38.6674171 36.9973457,38.8342142 36.992077,39.0003516 L6.007923,39.0003516 C6.00265426,38.8342142 6,38.6674171 6,38.5 C6,29.9395864 12.9395864,23 21.5,23 Z" id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+        <path d="M37,39 C40,39 40.75,37 39.25,33 C37,27 36.4375,26 37.5625,22" id="Path" stroke="#D8D8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+</svg>
