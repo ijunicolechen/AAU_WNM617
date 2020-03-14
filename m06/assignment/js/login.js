@@ -5,9 +5,21 @@ const checkLoginForm = () => {
 
     if (user === "user" && pass === "pass") {
         // logged in
+        if ($("#loginUser,#loginPass").hasClass("error")) {
+            $("#loginUser").removeClass("error");
+        }
+
         sessionStorage.userId = 3;
     } else {
+
         // not logged in
+        if (user !== "user") {
+            console.log("error");
+            $("#loginUser").addClass("error");
+        }
+        if (pass !== "pass") {
+            $("#loginPass").addClass("error");
+        }
         sessionStorage.removeItem('userId');
     }
 

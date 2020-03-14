@@ -43,9 +43,7 @@ $(() => {
 
     $("[data-template]").each(function () {
         let template_id = $(this).data("template");
-        console.log(template_id);
         let template_str = $(template_id).html();
-        console.log(template_str);
         $(this).html(template_str);
     })
 
