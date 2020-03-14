@@ -6,7 +6,7 @@ $(() => {
     $(document)
 
         /* FORMS */
-        .on("submit", "#loginForm", function (e) {
+        .on("click", "#login", function (e) {
             e.preventDefault();
             checkLoginForm();
         })
