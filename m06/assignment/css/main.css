@@ -35,7 +35,7 @@
 
 body {
     font-family: 'Montserrat', Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 100%;
     color: var(--colorScheme-Fawn);
 }
 
@@ -52,6 +52,14 @@ h1,
 h2 {
     font-family: 'Livvic', 'Montserrat', Helvetica, sans-serif;
     font-weight: bold;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+h2 {
+    font-size: 1.125em;
 }
 
 a {
@@ -111,19 +119,24 @@ img {
 
 .description-text {
     text-align: left;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     margin: .5rem 0;
 }
 
 .submit-button {
     font-family: 'Livvic', Helvetica, sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.125em;
     font-weight: bold;
     color: var(--colorScheme-Cinnamon);
     border-radius: 1.5rem;
     background-color: var(--colorScheme-Orange);
     border: none;
     padding: .5rem 1rem;
+}
+
+.container-hundred {
+    width: 100%;
+    height: 100%;
 }
 
 .msg-box {
@@ -180,10 +193,7 @@ img {
 }
 
 [data-role="header"] {
-    font-size: 1.25rem;
-}
-
-[data-role="header"] {
+    font-size: 1.125em;
     height: var(--header-height);
     line-height: var(--header-height);
 }
@@ -199,7 +209,7 @@ img {
     border-width: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     position: relative;
-    z-index: 2;
+    z-index: 50;
 }
 
 
@@ -273,7 +283,7 @@ img {
     width: calc(100% - 2.5rem);
     height: calc(100% - .6rem);
     color: var(--colorBasic-White);
-    font-size: 1.25rem;
+    font-size: 1.125em;
     overflow: hidden;
 }
 
@@ -304,7 +314,7 @@ img {
 input[type="text"].form-input {
     color: var(--colorScheme-Fawn);
     padding-top: 15px;
-    font-size: 1.2rem;
+    font-size: 1em;
     display: block;
     box-sizing: border-box;
 }
@@ -322,13 +332,13 @@ input[type="text"].form-input:valid~label {
 
 input[type="text"].form-input:focus~label .content-text,
 input[type="text"].form-input:valid~label .content-text {
-    font-size: .8rem;
+    font-size: .8em;
     transform: translateY(-100%);
 }
 
 .content-text {
     position: absolute;
-    font-size: 1.4rem;
+    font-size: 1.2em;
     top: 50%;
     transition: all 0.3s ease;
 }
@@ -374,6 +384,13 @@ input[type="text"].form-input:valid~label .content-text {
     text-align: left;
 }
 
+.display-bgc {
+    background-color: var(--coloScheme-Mideborry);
+}
+
+.edit-bgc {
+    background-color: var(--colorScheme-Eborry);
+}
 
 
 /* Map Peg */
@@ -422,23 +439,35 @@ input[type="text"].form-input:valid~label .content-text {
 }
 
 /* Breed & Collection Page */
-.nav-bar ul {
-    width: var(--header-height);
-    height: var(--header-height);
-
-}
 
 .nav-bar ul li {
     text-align: center;
-    width: 100%;
-    height: 100%;
 }
 
-.nav-bar ul li a::after {
+.nav-bar ul li a,
+.nav-bar ul li:last-child {
+    padding: 0 1rem;
+    font-size: 0.8125em;
+}
+
+.nav-bar ul li:first-child a::after {
     content: "<";
     color: var(--colorScheme-Fawn);
     border: 2px;
 }
+
+.nav-bar ul li .editIcon-cat {
+    display: inline-block;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+
+.nav-bar ul li .editIcon-cat svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 
 .breed-container {
     flex-direction: row;
@@ -506,7 +535,7 @@ input[type="text"].form-input:valid~label .content-text {
 }
 
 .icon-text {
-    font-size: .625rem;
+    font-size: .625em;
     line-height: 1rem;
 }
 
@@ -552,10 +581,11 @@ textarea {
 }
 
 /* Cat Info */
+
 .img-box {
     height: 20rem;
     width: 20rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     margin-bottom: 1.5rem;
 }
 
@@ -569,21 +599,43 @@ textarea {
 
 .title-about {
     color: var(--colorScheme-Orange);
-    font-size: 1.25em;
+    font-size: 1em;
     margin-bottom: .25rem;
 }
 
 .title-box p {
+    font-size: 0.8125em;
     color: var(--colorScheme-Lavender);
     margin: 0;
 }
 
+.edit-cat {
+    left: -100%;
+    transition: all .5s;
+}
+
+.edit-cat.active {
+    left: 0;
+}
+
 /* Profile Page */
+.profile-box {
+    width: 80%;
+    padding-top: 2rem;
+}
+
+.edit-icon {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
 .profile-img {
     position: relative;
     width: 10rem;
     height: 10rem;
-    margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 10px;
     background: wheat;
@@ -610,7 +662,6 @@ textarea {
     line-height: 2rem;
 }
 
-
 .detail-box {
     margin-bottom: 1.2rem;
 }
@@ -618,6 +669,20 @@ textarea {
 .detail-box h3 {
     padding: 0 1rem;
 }
+
+.edit-profile {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+    z-index: 10;
+}
+
+.edit-profile.active {
+    left: 50%;
+}
+
 
 /* Animation */
 @keyframes meteor {
