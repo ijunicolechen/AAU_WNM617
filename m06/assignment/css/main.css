@@ -265,8 +265,8 @@ img {
 }
 
 .icon-box {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    padding: 0 .5rem;
 }
 
 .input-box {
