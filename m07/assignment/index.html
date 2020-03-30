@@ -20,7 +20,7 @@
         <div data-role="main">
             <div class="container  margin-left-auto margin-right-auto">
                 <div class="logo-img">
-                    <img src="img/icon/logo_text.svg" >
+                    <img src="img/icon/logo_text.svg">
                 </div>
                 <form class="form" id="loginForm">
                     <div class="form-box display-flex">
@@ -83,7 +83,7 @@
                     </div>
                 </form>
                 <div class="button-box">
-                    <button id="login" class="submit-button">Log In</button>
+                    <button id="login" class="submit-button" type="submit" form="loginForm">Log In</button>
                 </div>
                 <div class="content-box">
                     <a href="#forgetpassPage">
@@ -92,7 +92,7 @@
                 </div>
                 <div class="content-box bottom-box">
                     <a href="#signupPage">
-                        <h4>Do not have an account? <span>Sing Up</span></h4>
+                        <h4>Do not have an account? <span>Sign Up</span></h4>
                     </a>
                     <hr>
                 </div>
@@ -424,7 +424,7 @@
                         <div class="breed-content">
                             <div class="breedImg-set">
                                 <div class="breedImg-single">
-                                    <img src="img/breed/example.png">
+                                    <img src="img/breed/Abyssinian_Mix.png">
                                 </div>
                                 <div class="breed-title">
                                     <h3>Create New</h3>
@@ -749,7 +749,7 @@
                     </a>
                 </div>
                 <div class="breed-box">
-                   <a href="#catsInfoPage">
+                    <a href="#catsInfoPage">
                         <div class="breed-content">
                             <div class="breedImg-set">
                                 <div class="breedImg-single">
@@ -760,14 +760,14 @@
                                 </div>
                             </div>
                         </div>
-                   </a>
+                    </a>
                 </div>
                 <div class="breed-box">
                     <a href="#catsInfoPage">
                         <div class="breed-content">
                             <div class="breedImg-set">
                                 <div class="breedImg-single">
-                                <img src="img/collection/xiaomi_01.JPG">
+                                    <img src="img/collection/xiaomi_01.JPG">
                                 </div>
                                 <div class="breed-title">
                                     <h3>Xiao Mi</h3>
@@ -837,7 +837,7 @@
                         <div class="breed-content">
                             <div class="breedImg-set">
                                 <div class="breedImg-single">
-                                <img src="img/collection/dada_02.JPG">
+                                    <img src="img/collection/dada_02.JPG">
                                 </div>
                                 <div class="breed-title">
                                     <h3>Da Da</h3>
@@ -1053,27 +1053,30 @@
                 <ul>
                     <li class="flex-none"><a href="#back" data-rel="back"></a></li>
                     <li class="flex-stretch"></li>
-                    <li class="flex-none">
-                            <div class="editIcon-cat" data-toggle="#catsInfoPage .edit-cat">
-                                <?xml version="1.0" ?>
-                                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
-                                    enable-background="new 0 0 24 24" id="Layer_1" version="1.1" viewBox="0 0 24 24" xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path class="icon-fill inactive"
-                                        d="M21.635,6.366c-0.467-0.772-1.043-1.528-1.748-2.229c-0.713-0.708-1.482-1.288-2.269-1.754L19,1C19,1,21,1,22,2S23,5,23,5  L21.635,6.366z M10,18H6v-4l0.48-0.48c0.813,0.385,1.621,0.926,2.348,1.652c0.728,0.729,1.268,1.535,1.652,2.348L10,18z M20.48,7.52  l-8.846,8.845c-0.467-0.771-1.043-1.529-1.748-2.229c-0.712-0.709-1.482-1.288-2.269-1.754L16.48,3.52  c0.813,0.383,1.621,0.924,2.348,1.651C19.557,5.899,20.097,6.707,20.48,7.52z M4,4v16h16v-7l3-3.038V21c0,1.105-0.896,2-2,2H3  c-1.104,0-2-0.895-2-2V3c0-1.104,0.896-2,2-2h11.01l-3.001,3H4z" />
-                                </svg>
-                            </div>
-                    </li>
                 </ul>
             </nav>
-           
+
         </header>
         <div data-role="main">
             <div class="scrolling display-bgc">
+
                 <div class="img-box margin-left-auto margin-right-auto">
                     <img src="img/collection/xiaoxiao_01.JPG" alt="My name is Xiao Xiao">
                 </div>
                 <div class="catInfo-box margin-left-auto margin-right-auto">
+                    <div class="icon-position">
+                        <div class="editIcon-cat" data-toggle="#catsInfoPage .edit-cat">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                            <svg enable-background="new 0 0 24 24" id="Layer_1" version="1.1" viewBox="0 0 24 24"
+                                xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path class="icon-fill inactive"
+                                    d="M21.635,6.366c-0.467-0.772-1.043-1.528-1.748-2.229c-0.713-0.708-1.482-1.288-2.269-1.754L19,1C19,1,21,1,22,2S23,5,23,5  L21.635,6.366z M10,18H6v-4l0.48-0.48c0.813,0.385,1.621,0.926,2.348,1.652c0.728,0.729,1.268,1.535,1.652,2.348L10,18z M20.48,7.52  l-8.846,8.845c-0.467-0.771-1.043-1.529-1.748-2.229c-0.712-0.709-1.482-1.288-2.269-1.754L16.48,3.52  c0.813,0.383,1.621,0.924,2.348,1.651C19.557,5.899,20.097,6.707,20.48,7.52z M4,4v16h16v-7l3-3.038V21c0,1.105-0.896,2-2,2H3  c-1.104,0-2-0.895-2-2V3c0-1.104,0.896-2,2-2h11.01l-3.001,3H4z" />
+                            </svg>
+                        </div>
+                    </div>
                     <div class="location_name title-box">
                         <div class="title-about">Breed</div>
                         <h3 class="text-center">Black</h3>
@@ -1100,10 +1103,11 @@
                     <img src="img/collection/xiaoxiao_01.JPG" alt="My name is Ca li">
                 </div>
                 <div class="catInfo-box margin-left-auto margin-right-auto">
-                    <form class="form" id="profileForm">
+                    <form class="form" id="profileForm" action="">
                         <div class="form-box">
                             <div class="input-box  margin-bottom-auto margin-top-auto">
-                                <input class="form-input" type="text" id="catBreed" data-role="none" value="Black" required>
+                                <input class="form-input" type="text" id="catBreed" data-role="none" value="Black"
+                                    required>
                                 <label class="form-label" for="catBreed">
                                     <span class="content-text">Breed</span>
                                 </label>
@@ -1111,7 +1115,8 @@
                         </div>
                         <div class="form-box">
                             <div class="input-box  margin-bottom-auto margin-top-auto">
-                                <input class="form-input" type="text" id="catLocation" data-role="none" value="SOMA Square" required>
+                                <input class="form-input" type="text" id="catLocation" data-role="none"
+                                    value="SOMA Square" required>
                                 <label class="form-label" for="catLocation">
                                     <span class="content-text">Location</span>
                                 </label>
@@ -1119,8 +1124,8 @@
                         </div>
                         <div class="form-textarea">
                             <div class="textarea-box margin-bottom-auto margin-top-auto">
-                            <label for="catDescription">Description</label>
-                            <textarea data-role="none" name="catDescription" id="catDescription">
+                                <label for="catDescription">Description</label>
+                                <textarea data-role="none" name="catDescription" id="catDescription">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius cumque molestiae, laudantium
                                 dolorum expedita, deserunt delectus, ab magni a quod ullam distinctio tempore ratione atque
                                 esse asperiores. Veniam, quisquam repellat.
@@ -1131,138 +1136,13 @@
                             </div>
                         </div>
                     </form>
+                    <div class="profile-btn button-box" data-deactivate="#catsInfoPage .edit-cat">
+                        <button class="submit-button">Save</button>
+                    </div>
                 </div>
-                <div class="profile-btn button-box" data-deactivate="#catsInfoPage .edit-cat">
-                    <button class="submit-button">Save</button>
-                </div>
-                <div class="profile-btn button-box " data-deactivate="#catsInfoPage .edit-cat">
-                    <button class="submit-button">Cancel</button>
-                </div>
+
             </div>
         </div>
-        <footer data-role="footer" data-template="#footer-nav-template">
-            <ul>
-                <li>
-                    <a href="#collectPage">
-                        <div class="footerIcon-box">
-                            <div class="footer-icon margin-left-auto margin-right-auto">
-                                <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-                                    <title>Collection_icon</title>
-                                    <desc>Created with Sketch.</desc>
-                                    <g id="Collection_icon" stroke="none" stroke-width="1" fill="none"
-                                        fill-rule="evenodd">
-                                        <path class='icon-stroke'
-                                            d="M3.54441431,19.0990788 C2.81852856,16.8119242 2.81852856,14.5247697 3.54441431,13.7623848 C4.27030005,13 6.44795728,12.2376152 8.62561452,14.5247697 C10.8032717,16.8119242 10.077386,19.8614636 8.62561452,21.3862333 C7.17384303,22.911003 4.27030005,21.3862333 3.54441431,19.0990788 Z"
-                                            id="Path-4" stroke="#D8D8D8" stroke-width="2"></path>
-                                        <path class='icon-stroke'
-                                            d="M11.6221878,10.7767542 C10.7926041,8.23547138 10.7926041,5.69418855 11.6221878,4.84709428 C12.4517715,4 14.9405226,3.15290572 17.4292737,5.69418855 C19.9180249,8.23547138 19.0884411,11.6238485 17.4292737,13.318037 C15.7701063,15.0122256 12.4517715,13.318037 11.6221878,10.7767542 Z"
-                                            id="Path-4-Copy" stroke="#D8D8D8" stroke-width="2"
-                                            transform="translate(15.000000, 9.000000) rotate(10.000000) translate(-15.000000, -9.000000) ">
-                                        </path>
-                                        <path class='icon-stroke'
-                                            d="M23.6221878,10.7767542 C22.7926041,8.23547138 22.7926041,5.69418855 23.6221878,4.84709428 C24.4517715,4 26.9405226,3.15290572 29.4292737,5.69418855 C31.9180249,8.23547138 31.0884411,11.6238485 29.4292737,13.318037 C27.7701063,15.0122256 24.4517715,13.318037 23.6221878,10.7767542 Z"
-                                            id="Path-4-Copy-2" stroke="#D8D8D8" stroke-width="2"
-                                            transform="translate(27.000000, 9.000000) scale(1, -1) rotate(6.000000) translate(-27.000000, -9.000000) ">
-                                        </path>
-                                        <path class='icon-stroke'
-                                            d="M32.5444143,20.0990788 C31.8185286,17.8119242 31.8185286,15.5247697 32.5444143,14.7623848 C33.2703001,14 35.4479573,13.2376152 37.6256145,15.5247697 C39.8032717,17.8119242 39.077386,20.8614636 37.6256145,22.3862333 C36.173843,23.911003 33.2703001,22.3862333 32.5444143,20.0990788 Z"
-                                            id="Path-4-Copy-3" stroke="#D8D8D8" stroke-width="2"
-                                            transform="translate(35.500000, 18.500000) rotate(49.000000) translate(-35.500000, -18.500000) ">
-                                        </path>
-                                        <path class='icon-stroke'
-                                            d="M16,38 C12,40.0155712 4,39.0155712 10,26.0155712 C16,13.0155712 27,15.0155712 32,26.0155712 C37,37.0155712 29,40.0155712 25,38.0155712 C21,36.0155712 20,35.9844288 16,38 Z"
-                                            id="Path-3" stroke="#D8D8D8" stroke-width="2"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="icon-text active">Collection</div>
-                        </div>
-
-                    </a>
-                </li>
-                <li>
-                    <a href="#mapPage">
-                        <div class="footerIcon-box">
-                            <div class="footer-icon margin-left-auto margin-right-auto">
-                                <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-                                    <title>Map_icon</title>
-                                    <desc>Created with Sketch.</desc>
-                                    <g id="Map_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g id="Group" transform="translate(3.000000, 4.000000)" stroke="#D8D8D8"
-                                            stroke-linejoin="round" stroke-width="2">
-                                            <polygon id="Rectangle" class="icon-stroke inactive"
-                                                points="0 1 12 3 12 34 0 32">
-                                            </polygon>
-                                            <polygon id="Rectangle-Copy" class="icon-stroke inactive"
-                                                points="12 3 24 0 24 31 12 34">
-                                            </polygon>
-                                            <polygon id="Rectangle-Copy-2" class="icon-stroke inactive"
-                                                points="24 0 37 2 37 33 24 31">
-                                            </polygon>
-                                        </g>
-                                        <g id="Group-2" transform="translate(35.000000, 18.000000)" stroke="#D8D8D8"
-                                            stroke-width="0.3">
-                                            <circle id="Oval" class="icon-stroke inactive"
-                                                transform="translate(1.891229, 3.902726) rotate(88.000000) translate(-1.891229, -3.902726) "
-                                                cx="1.89122944" cy="3.90272618" r="1"></circle>
-                                            <circle id="Oval-Copy" class="icon-stroke inactive"
-                                                transform="translate(1.208912, 2.476387) rotate(88.000000) translate(-1.208912, -2.476387) "
-                                                cx="1.20891179" cy="2.47638729" r="1"></circle>
-                                            <circle id="Oval-Copy-2" class="icon-stroke inactive"
-                                                transform="translate(2.622910, 2.501069) rotate(88.000000) translate(-2.622910, -2.501069) "
-                                                cx="2.62290996" cy="2.50106872" r="1"></circle>
-                                            <circle id="Oval-Copy-3" class="icon-stroke inactive"
-                                                transform="translate(3.317568, 3.220409) rotate(88.000000) translate(-3.317568, -3.220409) "
-                                                cx="3.31756833" cy="3.22040852" r="1"></circle>
-                                            <circle id="Oval-Copy-4" class="icon-stroke inactive"
-                                                transform="translate(3.292887, 4.634407) rotate(88.000000) translate(-3.292887, -4.634407) "
-                                                cx="3.2928869" cy="4.63440669" r="1"></circle>
-                                        </g>
-                                        <path d="M3,20 L15,26 L27,18 L37,24" id="Path-5" class="icon-stroke inactive"
-                                            stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-dasharray="1,5">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Map</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#profileDisplayPage">
-                        <div class="footerIcon-box">
-                            <div class="footer-icon margin-left-auto margin-right-auto">
-                                <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-                                    <title>User_icon</title>
-                                    <desc>Created with Sketch.</desc>
-                                    <g id="user_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <path class='icon-stroke inactive'
-                                            d="M21.5,4 C23.1587285,4 24.6916896,4.5384745 25.9336136,5.45015395 L28.4513041,4.4510659 L27.9044942,7.59504861 C28.5994938,8.7324805 29,10.0694686 29,11.5 C29,15.6421356 25.6421356,19 21.5,19 C17.3578644,19 14,15.6421356 14,11.5 C14,10.3937905 14.239491,9.34351716 14.6694525,8.39820059 L14,4 L17.2042442,5.35132626 C18.420962,4.49968828 19.9021268,4 21.5,4 Z"
-                                            id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
-                                        <path class='icon-stroke inactive'
-                                            d="M33.7476556,48.0009122 C30.9119101,51.6511971 26.4802512,54 21.5,54 C16.5197488,54 12.0880899,51.6511971 9.25234442,48.0009122 Z M21.5,23 C30.0604136,23 37,29.9395864 37,38.5 C37,38.6674171 36.9973457,38.8342142 36.992077,39.0003516 L6.007923,39.0003516 C6.00265426,38.8342142 6,38.6674171 6,38.5 C6,29.9395864 12.9395864,23 21.5,23 Z"
-                                            id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
-                                        <path class='icon-stroke inactive'
-                                            d="M37,39 C40,39 40.75,37 39.25,33 C37,27 36.4375,26 37.5625,22" id="Path"
-                                            stroke="#D8D8D8" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="icon-text">Profile</div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </footer>
     </section>
     <section data-role="page" id="profileDisplayPage">
         <header data-role="header">
@@ -1271,7 +1151,7 @@
                 <ul>
                     <li class="flex-stretch"></li>
                     <li id="logOut" class="flex-none">
-                       Log Out
+                        Log Out
                     </li>
                 </ul>
             </nav>
@@ -1281,12 +1161,14 @@
                 <div class="profile-box margin-left-auto margin-right-auto">
                     <div class="edit-icon" data-toggle="#profileDisplayPage .edit-profile">
                         <?xml version="1.0" ?>
-                        <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                        <!DOCTYPE svg
+                            PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
                             enable-background="new 0 0 24 24" id="Layer_1" version="1.1" viewBox="0 0 24 24"
-                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
                             <path class="icon-fill"
                                 d="M21.635,6.366c-0.467-0.772-1.043-1.528-1.748-2.229c-0.713-0.708-1.482-1.288-2.269-1.754L19,1C19,1,21,1,22,2S23,5,23,5  L21.635,6.366z M10,18H6v-4l0.48-0.48c0.813,0.385,1.621,0.926,2.348,1.652c0.728,0.729,1.268,1.535,1.652,2.348L10,18z M20.48,7.52  l-8.846,8.845c-0.467-0.771-1.043-1.529-1.748-2.229c-0.712-0.709-1.482-1.288-2.269-1.754L16.48,3.52  c0.813,0.383,1.621,0.924,2.348,1.651C19.557,5.899,20.097,6.707,20.48,7.52z M4,4v16h16v-7l3-3.038V21c0,1.105-0.896,2-2,2H3  c-1.104,0-2-0.895-2-2V3c0-1.104,0.896-2,2-2h11.01l-3.001,3H4z" />
-                            </svg>
+                        </svg>
                     </div>
                     <div class="profile-img margin-left-auto margin-right-auto">
                         <div class="img-contain">
@@ -1321,14 +1203,16 @@
                         </div>
                         <div class="upload-profile">
                             <label for="uploadProfile">Upload</label>
-                            <input type="file" name="uploadProfile" id="uploadProfile" class="display-none" data-role="none">
+                            <input type="file" name="uploadProfile" id="uploadProfile" class="display-none"
+                                data-role="none">
                         </div>
                     </div>
                     <div class="profile-content">
                         <form class="form" id="profileForm">
                             <div class="form-box">
                                 <div class="input-box  margin-bottom-auto margin-top-auto">
-                                    <input class="form-input" type="text" id="profileName" data-role="none" value="Da Miao" required>
+                                    <input class="form-input" type="text" id="profileName" data-role="none"
+                                        value="Da Miao" required>
                                     <label class="form-label" for="profileName">
                                         <span class="content-text">Name</span>
                                     </label>
@@ -1336,7 +1220,8 @@
                             </div>
                             <div class="form-box">
                                 <div class="input-box  margin-bottom-auto margin-top-auto">
-                                    <input class="form-input" type="text" id="profileBirthday" data-role="none" value="1981-10-27" required>
+                                    <input class="form-input" type="text" id="profileBirthday" data-role="none"
+                                        value="1981-10-27" required>
                                     <label class="form-label" for="profileBirthday">
                                         <span class="content-text">Birthday</span>
                                     </label>
@@ -1344,7 +1229,8 @@
                             </div>
                             <div class="form-box">
                                 <div class="input-box  margin-bottom-auto margin-top-auto">
-                                    <input class="form-input" type="text" id="profileEmail" data-role="none" value="damiao@gmail.com" required>
+                                    <input class="form-input" type="text" id="profileEmail" data-role="none"
+                                        value="damiao@gmail.com" required>
                                     <label class="form-label" for="profileEmail">
                                         <span class="content-text">Email</span>
                                     </label>
@@ -1496,9 +1382,9 @@
                     lng: 151.23064
                 },
                 zoom: 14,
-                zoomControl:false,
-                 mapTypeControl: false,
-                 streetViewControl: false
+                zoomControl: false,
+                mapTypeControl: false,
+                streetViewControl: false
             });
             var iconBase =
                 'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
@@ -1509,14 +1395,12 @@
                 }
             };
 
-            var features = [
-                {
-                    position: new google.maps.LatLng(-33.91721, 151.22630),
-                    type: 'info'
-                }
-            ];
-            
-             // Create markers.
+            var features = [{
+                position: new google.maps.LatLng(-33.91721, 151.22630),
+                type: 'info'
+            }];
+
+            // Create markers.
             for (var i = 0; i < features.length; i++) {
                 var marker = new google.maps.Marker({
                     position: features[i].position,
@@ -1524,11 +1408,11 @@
                     map: map
                 });
             };
-            
-            marker.addListener('click',function(){
+
+            marker.addListener('click', function () {
                 window.location.href = "#catsInfoPage";
             })
-            
+
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0inV_NBTlJ58jrlq3NOWnFRT9ckn42EI&callback=initMap"
