@@ -44,8 +44,9 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="input-box  margin-bottom-auto margin-top-auto">
-                            <input class="form-input" type="text" id="loginUser" data-role="none" required>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="loginUser" data-role="none" autocomplete="off"
+                                required>
                             <label class="form-label" for="loginUser">
                                 <span class="content-text">Username</span>
                             </label>
@@ -74,8 +75,9 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="input-box  margin-bottom-auto margin-top-auto">
-                            <input class="form-input" type="text" id="loginPass" data-role="none" required>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="loginPass" data-role="none" autocomplete="off"
+                                required>
                             <label class="form-label" for="loginPass">
                                 <span class="content-text">Password</span>
                             </label>
@@ -128,8 +130,9 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="input-box margin-bottom-auto margin-top-auto">
-                            <input class="form-input" type="text" id="signupEmail" data-role="none" required>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="signupEmail" data-role="none" autocomplete="off"
+                                required>
                             <label class="form-label" for="signupEmail">
                                 <span class="content-text">Email</span>
                             </label>
@@ -157,8 +160,9 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="input-box  margin-bottom-auto margin-top-auto">
-                            <input class="form-input" type="text" id="signupUser" data-role="none" required>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="signupUser" data-role="none" autocomplete="off"
+                                required>
                             <label class="form-label" for="signupUser">
                                 <span class="content-text">Username</span>
                             </label>
@@ -187,8 +191,9 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="input-box  margin-bottom-auto margin-top-auto">
-                            <input class="form-input" type="text" id="signupPass" data-role="none" required>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="signupPass" data-role="none" autocomplete="off"
+                                required>
                             <label class="form-label" for="signupPass">
                                 <span class="content-text">Password</span>
                             </label>
@@ -221,7 +226,7 @@
                     </div>
                     <form class="form" id="loginForm">
                         <div class="form-box display-flex">
-                            <div class="icon-box margin-top-auto">
+                            <div class="icon-box margin-top-auto ">
                                 <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
@@ -246,8 +251,9 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div class="input-box margin-bottom-auto margin-top-auto">
-                                <input class="form-input" type="text" id="signupEmail" data-role="none" required>
+                            <div class="input-box margin-top-auto">
+                                <input class="form-input" type="text" id="signupEmail" data-role="none"
+                                    autocomplete="off" required>
                                 <label class="form-label" for="signupEmail">
                                     <span class="content-text">Email</span>
                                 </label>
@@ -1384,14 +1390,138 @@
                 zoom: 14,
                 zoomControl: false,
                 mapTypeControl: false,
-                streetViewControl: false
+                streetViewControl: false,
+                styles: [{
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#242f3e'
+                        }]
+                    },
+                    {
+                        elementType: 'labels.text.stroke',
+                        stylers: [{
+                            color: '#242f3e'
+                        }]
+                    },
+                    {
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#746855'
+                        }]
+                    },
+                    {
+                        featureType: 'administrative.locality',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#d59563'
+                        }]
+                    },
+                    {
+                        featureType: 'poi',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#d59563'
+                        }]
+                    },
+                    {
+                        featureType: 'poi.park',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#263c3f'
+                        }]
+                    },
+                    {
+                        featureType: 'poi.park',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#6b9a76'
+                        }]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#38414e'
+                        }]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'geometry.stroke',
+                        stylers: [{
+                            color: '#212a37'
+                        }]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#9ca5b3'
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#746855'
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'geometry.stroke',
+                        stylers: [{
+                            color: '#1f2835'
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#f3d19c'
+                        }]
+                    },
+                    {
+                        featureType: 'transit',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#2f3948'
+                        }]
+                    },
+                    {
+                        featureType: 'transit.station',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#d59563'
+                        }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#17263c'
+                        }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#515c6d'
+                        }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{
+                            color: '#17263c'
+                        }]
+                    }
+                ]
             });
             var iconBase =
-                'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
+                'https://ijunicolechen.com/AAU/WNM617/m07/assignment/img/maker/';
 
             var icons = {
                 info: {
-                    icon: iconBase + 'beachflag.png'
+                    icon: iconBase + 'MapMarker_Black.png'
                 }
             };
 
