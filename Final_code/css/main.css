@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+@import "page.css";
+
+/* Global Setting */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Height */
+    --header-height: 3rem;
+    --footer-height: 4.5rem;
+
+    /* Color Basic */
+    --colorBasic-Black: #222222;
+    --colorBasic-White: #eeeeee;
+    --colorBasic-Lightblue: rgb(151, 224, 248);
+
+    /* Color Notify */
+    --colorError-Flamingo: #E8583C;
+    --colorMsgBackground-Black: rgba(34, 34, 34, .8);
+    --colorMsgBackground-White: rgba(238, 238, 238, .8);
+
+    /* Color Scheme */
+    --colorScheme-Eborry: #292726;
+    --coloScheme-Mideborry: #353231;
+    --colorScheme-Gray: #83808B;
+    --colorScheme-Lavender: #BDB7BD;
+    --colorScheme-Cinnamon: #894821;
+    --colorScheme-Orange: #e5b078;
+    --colorScheme-Fawn: #e9d0bc;
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 100%;
+    color: var(--colorScheme-Fawn);
+    background-color: var(--coloScheme-Mideborry);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-family: 'Livvic', 'Montserrat', Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+h2 {
+    font-size: 1.125em;
+}
+
+a {
+    color: var(--colorScheme-Lavender);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.dark-theme {
+    background-color: var(--colorScheme-Eborry);
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-stretch {
+    flex: 1 1 auto;
+}
+
+.flex-none {
+    flex: none;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.margin-right-auto {
+    margin-right: auto;
+}
+
+.margin-top-auto {
+    margin-top: auto;
+}
+
+.margin-bottom-auto {
+    margin-bottom: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.content-box {
+    color: var(--colorScheme-Lavender);
+    text-align: center;
+}
+
+.description-text {
+    text-align: left;
+    font-size: 0.8125em;
+    margin: .5rem 0;
+}
+
+.submit-button {
+    font-family: 'Livvic', Helvetica, sans-serif;
+    font-size: 1.125em;
+    font-weight: bold;
+    color: var(--colorScheme-Cinnamon);
+    border-radius: 1.5rem;
+    background-color: var(--colorScheme-Orange);
+    border: none;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.container-hundred {
+    width: 100%;
+    height: 100%;
+}
+
+.msg-box {
+    color: var(--colorScheme-Fawn);
+}
+
+.scrolling {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+
+.scrolling::-webkit-scrollbar {
+    display: none;
+}
+
+.icon-fill {
+    fill: var(--colorScheme-Orange);
+}
+
+.icon-stroke {
+    stroke: var(--colorScheme-Orange);
+}
+
+.icon-fill.inactive {
+    fill: var(--colorScheme-Fawn);
+}
+
+.icon-stroke.inactive {
+    stroke: var(--colorScheme-Fawn);
+}
+
+/* jQuery mobile css modify */
+.ui-mobile .ui-page-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+[data-role='main'] {
+    flex: 1 1 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: var(--coloScheme-Mideborry);
+}
+
+[data-role="header"] {
+    font-size: 1.125em;
+    height: var(--header-height);
+    line-height: var(--header-height);
+}
+
+[data-role="footer"] {
+    height: var(--footer-height);
+    line-height: var(--footer-height);
+}
+
+[data-role="header"],
+[data-role="footer"] {
+    background-color: var(--colorScheme-Eborry);
+    border-width: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 50;
+}
+
+
+
+.ui-header .ui-title,
+.ui-footer .ui-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.ui-header ul,
+.ui-footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+.ui-footer li {
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative;
+}
+
+.ui-header div,
+.ui-footer div {
+    display: block;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+}
+
+.footerIcon-box {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.footer-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-text {
+    font-size: .625em;
+    line-height: 1rem;
+}
+
+.icon-text.active {
+    color: var(--colorScheme-Orange);
+}
