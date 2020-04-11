@@ -2,8 +2,8 @@
 
 function makeConn(){
     $host = "localhost";
-    $user="yuyin608";
-    $pass="iazhxGWDJ5D3QGz";
+    $user="yuyin617";
+    $pass="lIxIHYPf4HHw";
     $dbname="wnm617Web";
     
     $c = new mysqli($host,$user,$pass,$dbname);
@@ -49,7 +49,7 @@ function makeStatement($c,$t) {
 echo json_encode(
 	makeStatement(
 		makeConn(),
-		(isset($_GET['type']) ? $_GET['type'] : "animals_all")
+		(isset($_GET['type']) ? $_GET['type'] : "users_all")
 	),
 	JSON_NUMERIC_CHECK
 );

@@ -1,11 +1,17 @@
-const checkLoginForm = () => {
+const checkLoginForm = async () => {
 
     let user = $("#login-username").val();
     let pass = $("#login-password").val();
 
-    if (user === "user" && pass === "pass") {
+    let u = await query({
+        type: 'check_login',
+        params: [user, pass]
+    });
+
+    if (u.result.length) {
         // logged in
-        sessionStorage.userId = 3;
+        sessionStorage.userId = u.result[0].id;
+        $("#login-form")[0].reset();
     } else {
         // not logged in
         sessionStorage.removeItem('userId');
@@ -13,6 +19,7 @@ const checkLoginForm = () => {
 
     checkUserId();
 }
+
 
 
 const checkUserId = () => {
