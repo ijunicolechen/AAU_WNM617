@@ -11,7 +11,7 @@
 
 :root {
     /* Height */
-    --header-height: 3.5rem;
+    --header-height: 3rem;
     --footer-height: 4.25rem;
 
     /* Color Basic */
@@ -53,6 +53,7 @@ h1,
 h2 {
     font-family: 'Livvic', 'Montserrat', Helvetica, sans-serif;
     font-weight: bold;
+    letter-spacing: .05em;
 }
 
 h1 {
@@ -479,8 +480,7 @@ input[type="text"].form-input:valid~label .content-text {
 }
 
 
-.breed-container,
-.collection-container {
+.box-container {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -532,6 +532,10 @@ input[type="text"].form-input:valid~label .content-text {
     opacity: .8;
 }
 
+.collection-container {
+    height: 90%;
+}
+
 .collection-filter {
     height: 2rem;
     width: 90%;
@@ -563,13 +567,13 @@ input[type="text"].form-input:valid~label .content-text {
 }
 
 .collection-box {
-    margin: 0 .3rem;
+    margin: 0 .3rem 1.2rem;
     height: fit-content;
     position: relative;
 }
 
 .collection-card {
-    height: 12rem;
+    height: 13rem;
     width: 100%;
     background-color: var(--colorScheme-Lavender);
     border-radius: 20px;
@@ -584,9 +588,35 @@ input[type="text"].form-input:valid~label .content-text {
 .collection-infoBox {
     width: 45%;
     height: 100%;
-    padding: 10px;
+    padding: 30px 5px 10px 15px;
     color: black;
 }
+
+.collection-box .icon-favor {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+    z-index: 100;
+}
+
+.collection-infoBox .icon-favor img {
+    width: 100%;
+    height: 100%;
+}
+
+.collection-infoBox span {
+    font-size: .5em;
+    color: var(--coloScheme-Mideborry);
+}
+
+.collection-infoBox h3 {
+    font-size: 1em;
+    color: var(--colorScheme-Cinnamon);
+}
+
+
 
 
 /* Add Cat Page */
@@ -665,7 +695,78 @@ textarea {
 }
 
 /* Profile Page */
-.profile-box {
+.profile-container {
+    width: 90%;
+}
+
+.user-container {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.profile-imgBox {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 6rem;
+    height: 6rem;
+    z-index: 100;
+}
+
+.profile-content {
+    background-color: aliceblue;
+    width: 100%;
+    height: fit-content;
+    border-radius: 15px;
+    margin-top: -2rem;
+    padding: 1rem .5rem;
+    z-index: 10;
+    background-color: var(--colorScheme-Fawn);
+}
+
+.edit-icon {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 1rem;
+    z-index: 150;
+}
+
+.edit-icon svg {
+    fill: var(--colorScheme-Eborry);
+}
+
+.user-information {
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--colorScheme-Cinnamon);
+
+}
+
+.user-information h3 {
+    font-size: 1.5em;
+    margin: .5rem 0;
+
+}
+
+.user-information div {
+    font-size: 0.8em;
+    color: var(--colorScheme-Cinnamon);
+}
+
+.user-ranking {
+    color: var(--colorScheme-Cinnamon);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.ranking-box {
+    flex-grow: 1;
+    width: 33%;
+}
+
+/* Old Profile Page */
+/* .profile-box {
     width: 80%;
     padding-top: 2rem;
 }
@@ -727,7 +828,7 @@ textarea {
 
 .edit-profile.active {
     left: 50%;
-}
+} */
 
 /*Footer*/
 .footerIcon-box {

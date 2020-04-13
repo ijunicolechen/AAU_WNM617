@@ -12,6 +12,7 @@ function fetchAll($r) {
 	$a = [];
 	while($row = $r->fetch_assoc())
 		$a[] = $row;
+	
 	return $a;
 }
 
@@ -62,8 +63,8 @@ function makeStatement($c,$t,$p) {
 		case "cat_user":
 			return makeQuery($c,"SELECT * FROM `cat_user`","",$p);
 		//Fetch all of the cat information
-		case "cat_collection":
-			return makeQuery($c,"SELECT * FROM `cat_collection`","",$p);
+		case "cat_collection_all":
+			return makeQuery($c,"SELECT c.*, i.*, b.* FROM `cat_collection` c JOIN `cat_image` i JOIN `cat_breed` b ON c.a_id = i.i_aid AND c.a_bid = b.b_id GROUP BY c.a_id","",$p);
 		//Fetch all of the cat location
 		case "cat_location":
 			return makeQuery($c,"SELECT * FROM `cat_location`","",$p);
@@ -77,7 +78,9 @@ function makeStatement($c,$t,$p) {
 		i(integer) d(decimal) s(string)
 		67,59.99,'fruit'
 		*/
-
+		//Fetch all of the cat information by type
+		case "cat_collection_type":
+			return makeQuery($c,"SELECT c.*, i.*, b.* FROM `cat_collection` c JOIN `cat_image` i JOIN `cat_breed` b ON c.a_id = i.i_aid AND c.a_bid = b.b_id WHERE c.a_type = ? GROUP BY c.a_id","i",$p);
 		//Fetch a specific cat information by a_id
 		case "cat_from_collection":
 			return makeQuery($c,"SELECT * FROM `cat_collection` RIGHT JOIN `cat_image` ON cat_image.i_aid = cat_collection.a_id WHERE a_id = ? ORDER BY cat_image.i_id DESC","i",$p);

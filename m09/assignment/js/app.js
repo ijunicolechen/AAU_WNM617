@@ -15,10 +15,10 @@ $(() => {
                 case "breedPage":
                     showBreedPage();
                     break;
+                case "collectPage":
+                    showCollectionPage($(".collection-filter.active").data("name"));
+                    break;
                     /*
-                    case "collectPage":
-                        showCollectPage();
-                        break;
                     case "profileDisplayPage":
                         showProfilePage();
                         break;
@@ -59,10 +59,16 @@ $(() => {
         .on("click", "[data-activateone]", function (e) {
             $($(this).data("activateone"))
                 .addClass("active")
-                .siblings().removeClass("active");
+                .siblings("li").removeClass("active");
+            showCollectionPage($(this).data("name"));
         })
 
-
+    $(".collection-filter").on("click", function (e) {
+        if (!$(this).hasClass("active")) {
+            $(this).addClass("active").siblings("li").removeClass("active");
+            showCollectionPage($(this).data("name"));
+        }
+    })
 
     $("[data-template]").each(function () {
         let template_id = $(this).data("template");

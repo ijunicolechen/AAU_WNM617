@@ -316,7 +316,7 @@
             </nav>
         </header>
         <div data-role="main">
-            <div class="breed-list breed-container display-flex scrolling">
+            <div class="breed-list box-container display-flex scrolling">
             </div>
         </div>
     </section>
@@ -325,42 +325,21 @@
             <h1>Collection</h1>
         </header>
         <div data-role="main">
-            <div class="collection-container collection-filter">
-                <ul>
-                    <li>ALL</li>
-                    <li>Feral</li>
-                    <li>Pet</li>
+            <div class="addCat-icon">
+                <a href="#breedPage">
+                    <div class="addCat-circle">
+                        <div class="addCat-plus"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="box-container collection-filter">
+                <ul id="filterSelection">
+                    <li class="collection-filter active" data-name="ALL">ALL</li>
+                    <li class="collection-filter" data-name="FERAL">Feral</li>
+                    <li class="collection-filter" data-name="PET">PET</li>
                 </ul>
             </div>
-            <div class="collection-container collection-list display-flex scrolling">
-                <div class="collection-box">
-                    <a href="#catsInfoPage">
-                        <div class="collection-card display-flex">
-                            <div class="collection-imgBox">
-                                <img src="img/collection/cali_01.JPG" alt="Cali">
-                            </div>
-                            <div class="collection-infoBox">
-                                <div class="icon-favor"></div>
-                                <div class="col-box">
-                                    <span>Name</span>
-                                    <h3>Ban Ban</h3>
-                                </div>
-                                <div class="col-box">
-                                    <span>Breed</span>
-                                    <h3>Tabby</h3>
-                                </div>
-                                <div class="col-box">
-                                    <span>Date</span>
-                                    <h3>10-12-2019</h3>
-                                </div>
-                                <div class="col-box">
-                                    <span>Status</span>
-                                    <h3>Public</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <div class="box-container collection-container collection-list display-flex scrolling">
             </div>
         </div>
         <footer data-role="footer" data-template="#footer-nav-template">
@@ -521,108 +500,167 @@
         <header data-role="header">
             <nav class="nav-bar">
                 <h1 class="ui-title" role="heading" aria-level="1">Profile</h1>
-                <ul>
-                    <li class="flex-stretch"></li>
-                    <li id="logOut" class="flex-none">
-                        Log Out
-                    </li>
-                </ul>
             </nav>
         </header>
         <div data-role="main">
             <div class="container-hundred display-bgc scrolling">
-                <div class="profile-box margin-left-auto margin-right-auto">
-                    <div class="edit-icon" data-toggle="#profileDisplayPage .edit-profile">
-                        <?xml version="1.0" ?>
-                        <!DOCTYPE svg
-                            PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
-                            enable-background="new 0 0 24 24" id="Layer_1" version="1.1" viewBox="0 0 24 24"
-                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path class="icon-fill"
-                                d="M21.635,6.366c-0.467-0.772-1.043-1.528-1.748-2.229c-0.713-0.708-1.482-1.288-2.269-1.754L19,1C19,1,21,1,22,2S23,5,23,5  L21.635,6.366z M10,18H6v-4l0.48-0.48c0.813,0.385,1.621,0.926,2.348,1.652c0.728,0.729,1.268,1.535,1.652,2.348L10,18z M20.48,7.52  l-8.846,8.845c-0.467-0.771-1.043-1.529-1.748-2.229c-0.712-0.709-1.482-1.288-2.269-1.754L16.48,3.52  c0.813,0.383,1.621,0.924,2.348,1.651C19.557,5.899,20.097,6.707,20.48,7.52z M4,4v16h16v-7l3-3.038V21c0,1.105-0.896,2-2,2H3  c-1.104,0-2-0.895-2-2V3c0-1.104,0.896-2,2-2h11.01l-3.001,3H4z" />
-                        </svg>
-                    </div>
-                    <div class="profile-img margin-left-auto margin-right-auto">
-                        <div class="img-contain">
-                            <img src="img/profile/i-chen.jpg" alt="example">
+                <div class="profile-container margin-left-auto margin-right-auto">
+                    <div class="user-container">
+                        <div class="profile-imgBox margin-left-auto margin-right-auto">
+                            <img src="img/profile/i-chen.jpg" alt="I-Chen">
+                        </div>
+                        <div class="profile-content">
+                            <div class="edit-icon">
+                                <?xml version="1.0" ?>
+                                <!DOCTYPE svg
+                                    PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                                <svg enable-background="new 0 0 24 24" id="Layer_1" version="1.1" viewBox="0 0 24 24"
+                                    xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path
+                                        d="M21.635,6.366c-0.467-0.772-1.043-1.528-1.748-2.229c-0.713-0.708-1.482-1.288-2.269-1.754L19,1C19,1,21,1,22,2S23,5,23,5  L21.635,6.366z M10,18H6v-4l0.48-0.48c0.813,0.385,1.621,0.926,2.348,1.652c0.728,0.729,1.268,1.535,1.652,2.348L10,18z M20.48,7.52  l-8.846,8.845c-0.467-0.771-1.043-1.529-1.748-2.229c-0.712-0.709-1.482-1.288-2.269-1.754L16.48,3.52  c0.813,0.383,1.621,0.924,2.348,1.651C19.557,5.899,20.097,6.707,20.48,7.52z M4,4v16h16v-7l3-3.038V21c0,1.105-0.896,2-2,2H3  c-1.104,0-2-0.895-2-2V3c0-1.104,0.896-2,2-2h11.01l-3.001,3H4z" />
+                                </svg>
+                            </div>
+                            <div class="user-information">
+                                <h3>Da Miao</h3>
+                                <div class="user-location">San Francisco, CA</div>
+                                <div class="user-email">damiao@gmail.com</div>
+                            </div>
+                            <div class="user-ranking display-flex">
+                                <div class="ranking-box">
+                                    <h6>Title</h6>
+                                    <h4>Novice</h4>
+                                </div>
+                                <div class="ranking-box">
+                                    <h6>Collection</h5>
+                                        <h4>10</h4>
+                                </div>
+                                <div class="ranking-box">
+                                    <h6>Login</h6>
+                                    <h4>10-27-2019</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="profile-content">
-                        <div class="detail-box">
-                            <div class="title-about">Name</div>
-                            <h3>Da Miao</h3>
-                        </div>
-                        <div class="detail-box">
-                            <div class="title-about">Birthday</div>
-                            <h3>1981-10-27</h3>
-                        </div>
-                        <div class="detail-box">
-                            <div class="title-about">Email</div>
-                            <h3>damiao@gmail.com</h3>
-                        </div>
-                        <div class="detail-box">
-                            <div class="title-about">Collection</div>
-                            <h3>10 <span>cats</span></h3>
-                        </div>
-                    </div>
+                    <div class="list-container"></div>
                 </div>
+
             </div>
-            <div class="container-hundred edit-bgc edit-profile scrolling">
-                <div class="profile-box margin-left-auto margin-right-auto">
-                    <div class="profile-img margin-left-auto margin-right-auto">
-                        <div class="img-contain">
-                            <img src="img/profile/i-chen.jpg" alt="example">
-                        </div>
-                        <div class="upload-profile">
-                            <label for="uploadProfile">Upload</label>
-                            <input type="file" name="uploadProfile" id="uploadProfile" class="display-none"
-                                data-role="none">
-                        </div>
-                    </div>
-                    <div class="profile-content">
-                        <form class="form" id="profileForm">
-                            <div class="form-box">
-                                <div class="input-box  margin-bottom-auto margin-top-auto">
-                                    <input class="form-input" type="text" id="profileName" data-role="none"
-                                        value="Da Miao" required>
-                                    <label class="form-label" for="profileName">
-                                        <span class="content-text">Name</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-box">
-                                <div class="input-box  margin-bottom-auto margin-top-auto">
-                                    <input class="form-input" type="text" id="profileBirthday" data-role="none"
-                                        value="1981-10-27" required>
-                                    <label class="form-label" for="profileBirthday">
-                                        <span class="content-text">Birthday</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-box">
-                                <div class="input-box  margin-bottom-auto margin-top-auto">
-                                    <input class="form-input" type="text" id="profileEmail" data-role="none"
-                                        value="damiao@gmail.com" required>
-                                    <label class="form-label" for="profileEmail">
-                                        <span class="content-text">Email</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="profile-btn button-box" data-deactivate="#profileDisplayPage .edit-profile">
-                        <button class="submit-button">Save</button>
-                    </div>
-                    <div class="profile-btn button-box " data-deactivate="#profileDisplayPage .edit-profile">
-                        <button class="submit-button">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer data-role="footer" data-template="#footer-nav-template">
-        </footer>
+            <footer data-role="footer" data-template="#footer-nav-template">
+            </footer>
     </section>
+    <script type="text/template" id="footer-nav-template">
+        <ul>
+            <li>
+                <a href="#collectPage">
+                    <div class="footerIcon-box">
+                        <div class="footer-icon margin-left-auto margin-right-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>Collection_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Collection_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class='collection-icon icon-stroke'
+                                        d="M3.54441431,19.0990788 C2.81852856,16.8119242 2.81852856,14.5247697 3.54441431,13.7623848 C4.27030005,13 6.44795728,12.2376152 8.62561452,14.5247697 C10.8032717,16.8119242 10.077386,19.8614636 8.62561452,21.3862333 C7.17384303,22.911003 4.27030005,21.3862333 3.54441431,19.0990788 Z"
+                                        id="Path-4" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M11.6221878,10.7767542 C10.7926041,8.23547138 10.7926041,5.69418855 11.6221878,4.84709428 C12.4517715,4 14.9405226,3.15290572 17.4292737,5.69418855 C19.9180249,8.23547138 19.0884411,11.6238485 17.4292737,13.318037 C15.7701063,15.0122256 12.4517715,13.318037 11.6221878,10.7767542 Z"
+                                        id="Path-4-Copy" stroke="#D8D8D8" stroke-width="2"
+                                        transform="translate(15.000000, 9.000000) rotate(10.000000) translate(-15.000000, -9.000000) ">
+                                    </path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M23.6221878,10.7767542 C22.7926041,8.23547138 22.7926041,5.69418855 23.6221878,4.84709428 C24.4517715,4 26.9405226,3.15290572 29.4292737,5.69418855 C31.9180249,8.23547138 31.0884411,11.6238485 29.4292737,13.318037 C27.7701063,15.0122256 24.4517715,13.318037 23.6221878,10.7767542 Z"
+                                        id="Path-4-Copy-2" stroke="#D8D8D8" stroke-width="2"
+                                        transform="translate(27.000000, 9.000000) scale(1, -1) rotate(6.000000) translate(-27.000000, -9.000000) ">
+                                    </path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M32.5444143,20.0990788 C31.8185286,17.8119242 31.8185286,15.5247697 32.5444143,14.7623848 C33.2703001,14 35.4479573,13.2376152 37.6256145,15.5247697 C39.8032717,17.8119242 39.077386,20.8614636 37.6256145,22.3862333 C36.173843,23.911003 33.2703001,22.3862333 32.5444143,20.0990788 Z"
+                                        id="Path-4-Copy-3" stroke="#D8D8D8" stroke-width="2"
+                                        transform="translate(35.500000, 18.500000) rotate(49.000000) translate(-35.500000, -18.500000) ">
+                                    </path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M16,38 C12,40.0155712 4,39.0155712 10,26.0155712 C16,13.0155712 27,15.0155712 32,26.0155712 C37,37.0155712 29,40.0155712 25,38.0155712 C21,36.0155712 20,35.9844288 16,38 Z"
+                                        id="Path-3" stroke="#D8D8D8" stroke-width="2"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="collection-icon icon-text">Collection</div>
+                    </div>
+
+                </a>
+            </li>
+            <li>
+                <a href="#mapPage">
+                    <div class="footerIcon-box">
+                        <div class="footer-icon margin-left-auto margin-right-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>Map_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Map_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group" transform="translate(3.000000, 4.000000)" stroke="#D8D8D8"
+                                        stroke-linejoin="round" stroke-width="2">
+                                        <polygon id="Rectangle" class="map-icon collection icon-stroke" points="0 1 12 3 12 34 0 32">
+                                        </polygon>
+                                        <polygon id="Rectangle-Copy" class="map-icon collection icon-stroke" points="12 3 24 0 24 31 12 34">
+                                        </polygon>
+                                        <polygon id="Rectangle-Copy-2" class="map-icon collection icon-stroke"
+                                            points="24 0 37 2 37 33 24 31"></polygon>
+                                    </g>
+                                    <g id="Group-2" transform="translate(35.000000, 18.000000)" stroke="#D8D8D8"
+                                        stroke-width="0.3">
+                                        <circle id="Oval" class="map-icon icon-stroke"
+                                            transform="translate(1.891229, 3.902726) rotate(88.000000) translate(-1.891229, -3.902726) "
+                                            cx="1.89122944" cy="3.90272618" r="1"></circle>
+                                        <circle id="Oval-Copy" class="map-icon icon-stroke"
+                                            transform="translate(1.208912, 2.476387) rotate(88.000000) translate(-1.208912, -2.476387) "
+                                            cx="1.20891179" cy="2.47638729" r="1"></circle>
+                                        <circle id="Oval-Copy-2" class="map-icon icon-stroke"
+                                            transform="translate(2.622910, 2.501069) rotate(88.000000) translate(-2.622910, -2.501069) "
+                                            cx="2.62290996" cy="2.50106872" r="1"></circle>
+                                        <circle id="Oval-Copy-3" class="map-icon icon-stroke"
+                                            transform="translate(3.317568, 3.220409) rotate(88.000000) translate(-3.317568, -3.220409) "
+                                            cx="3.31756833" cy="3.22040852" r="1"></circle>
+                                        <circle id="Oval-Copy-4" class="map-icon icon-stroke"
+                                            transform="translate(3.292887, 4.634407) rotate(88.000000) translate(-3.292887, -4.634407) "
+                                            cx="3.2928869" cy="4.63440669" r="1"></circle>
+                                    </g>
+                                    <path d="M3,20 L15,26 map collection L27,18 L37,24" id="Path-5" class="map-icon icon-stroke"
+                                        stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-dasharray="1,5">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="map-icon icon-text">Map</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#profileDisplayPage">
+                    <div class="footerIcon-box">
+                        <div class="footer-icon margin-left-auto margin-right-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>User_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="user_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class='profile-icon icon-stroke'
+                                        d="M21.5,4 C23.1587285,4 24.6916896,4.5384745 25.9336136,5.45015395 L28.4513041,4.4510659 L27.9044942,7.59504861 C28.5994938,8.7324805 29,10.0694686 29,11.5 C29,15.6421356 25.6421356,19 21.5,19 C17.3578644,19 14,15.6421356 14,11.5 C14,10.3937905 14.239491,9.34351716 14.6694525,8.39820059 L14,4 L17.2042442,5.35132626 C18.420962,4.49968828 19.9021268,4 21.5,4 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='profile-icon icon-stroke'
+                                        d="M33.7476556,48.0009122 C30.9119101,51.6511971 26.4802512,54 21.5,54 C16.5197488,54 12.0880899,51.6511971 9.25234442,48.0009122 Z M21.5,23 C30.0604136,23 37,29.9395864 37,38.5 C37,38.6674171 36.9973457,38.8342142 36.992077,39.0003516 L6.007923,39.0003516 C6.00265426,38.8342142 6,38.6674171 6,38.5 C6,29.9395864 12.9395864,23 21.5,23 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='profile-icon icon-stroke'
+                                        d="M37,39 C40,39 40.75,37 39.25,33 C37,27 36.4375,26 37.5625,22" id="Path"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="profile-icon icon-text">Profile</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </script>
     <script>
         // Google Maps Platform tutorial
         var map;
@@ -793,118 +831,7 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0inV_NBTlJ58jrlq3NOWnFRT9ckn42EI&callback=initMap"
         async defer></script>
-    <script type="text/template" id="footer-nav-template">
-        <ul>
-            <li>
-                <a href="#collectPage">
-                    <div class="footerIcon-box">
-                        <div class="footer-icon margin-left-auto margin-right-auto">
-                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <title>Collection_icon</title>
-                                <desc>Created with Sketch.</desc>
-                                <g id="Collection_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <path class='collection-icon icon-stroke'
-                                        d="M3.54441431,19.0990788 C2.81852856,16.8119242 2.81852856,14.5247697 3.54441431,13.7623848 C4.27030005,13 6.44795728,12.2376152 8.62561452,14.5247697 C10.8032717,16.8119242 10.077386,19.8614636 8.62561452,21.3862333 C7.17384303,22.911003 4.27030005,21.3862333 3.54441431,19.0990788 Z"
-                                        id="Path-4" stroke="#D8D8D8" stroke-width="2"></path>
-                                    <path class='collection-icon icon-stroke'
-                                        d="M11.6221878,10.7767542 C10.7926041,8.23547138 10.7926041,5.69418855 11.6221878,4.84709428 C12.4517715,4 14.9405226,3.15290572 17.4292737,5.69418855 C19.9180249,8.23547138 19.0884411,11.6238485 17.4292737,13.318037 C15.7701063,15.0122256 12.4517715,13.318037 11.6221878,10.7767542 Z"
-                                        id="Path-4-Copy" stroke="#D8D8D8" stroke-width="2"
-                                        transform="translate(15.000000, 9.000000) rotate(10.000000) translate(-15.000000, -9.000000) ">
-                                    </path>
-                                    <path class='collection-icon icon-stroke'
-                                        d="M23.6221878,10.7767542 C22.7926041,8.23547138 22.7926041,5.69418855 23.6221878,4.84709428 C24.4517715,4 26.9405226,3.15290572 29.4292737,5.69418855 C31.9180249,8.23547138 31.0884411,11.6238485 29.4292737,13.318037 C27.7701063,15.0122256 24.4517715,13.318037 23.6221878,10.7767542 Z"
-                                        id="Path-4-Copy-2" stroke="#D8D8D8" stroke-width="2"
-                                        transform="translate(27.000000, 9.000000) scale(1, -1) rotate(6.000000) translate(-27.000000, -9.000000) ">
-                                    </path>
-                                    <path class='collection-icon icon-stroke'
-                                        d="M32.5444143,20.0990788 C31.8185286,17.8119242 31.8185286,15.5247697 32.5444143,14.7623848 C33.2703001,14 35.4479573,13.2376152 37.6256145,15.5247697 C39.8032717,17.8119242 39.077386,20.8614636 37.6256145,22.3862333 C36.173843,23.911003 33.2703001,22.3862333 32.5444143,20.0990788 Z"
-                                        id="Path-4-Copy-3" stroke="#D8D8D8" stroke-width="2"
-                                        transform="translate(35.500000, 18.500000) rotate(49.000000) translate(-35.500000, -18.500000) ">
-                                    </path>
-                                    <path class='collection-icon icon-stroke'
-                                        d="M16,38 C12,40.0155712 4,39.0155712 10,26.0155712 C16,13.0155712 27,15.0155712 32,26.0155712 C37,37.0155712 29,40.0155712 25,38.0155712 C21,36.0155712 20,35.9844288 16,38 Z"
-                                        id="Path-3" stroke="#D8D8D8" stroke-width="2"></path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="collection-icon icon-text">Collection</div>
-                    </div>
 
-                </a>
-            </li>
-            <li>
-                <a href="#mapPage">
-                    <div class="footerIcon-box">
-                        <div class="footer-icon margin-left-auto margin-right-auto">
-                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <title>Map_icon</title>
-                                <desc>Created with Sketch.</desc>
-                                <g id="Map_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Group" transform="translate(3.000000, 4.000000)" stroke="#D8D8D8"
-                                        stroke-linejoin="round" stroke-width="2">
-                                        <polygon id="Rectangle" class="map-icon collection icon-stroke" points="0 1 12 3 12 34 0 32">
-                                        </polygon>
-                                        <polygon id="Rectangle-Copy" class="map-icon collection icon-stroke" points="12 3 24 0 24 31 12 34">
-                                        </polygon>
-                                        <polygon id="Rectangle-Copy-2" class="map-icon collection icon-stroke"
-                                            points="24 0 37 2 37 33 24 31"></polygon>
-                                    </g>
-                                    <g id="Group-2" transform="translate(35.000000, 18.000000)" stroke="#D8D8D8"
-                                        stroke-width="0.3">
-                                        <circle id="Oval" class="map-icon icon-stroke"
-                                            transform="translate(1.891229, 3.902726) rotate(88.000000) translate(-1.891229, -3.902726) "
-                                            cx="1.89122944" cy="3.90272618" r="1"></circle>
-                                        <circle id="Oval-Copy" class="map-icon icon-stroke"
-                                            transform="translate(1.208912, 2.476387) rotate(88.000000) translate(-1.208912, -2.476387) "
-                                            cx="1.20891179" cy="2.47638729" r="1"></circle>
-                                        <circle id="Oval-Copy-2" class="map-icon icon-stroke"
-                                            transform="translate(2.622910, 2.501069) rotate(88.000000) translate(-2.622910, -2.501069) "
-                                            cx="2.62290996" cy="2.50106872" r="1"></circle>
-                                        <circle id="Oval-Copy-3" class="map-icon icon-stroke"
-                                            transform="translate(3.317568, 3.220409) rotate(88.000000) translate(-3.317568, -3.220409) "
-                                            cx="3.31756833" cy="3.22040852" r="1"></circle>
-                                        <circle id="Oval-Copy-4" class="map-icon icon-stroke"
-                                            transform="translate(3.292887, 4.634407) rotate(88.000000) translate(-3.292887, -4.634407) "
-                                            cx="3.2928869" cy="4.63440669" r="1"></circle>
-                                    </g>
-                                    <path d="M3,20 L15,26 map collection L27,18 L37,24" id="Path-5" class="map-icon icon-stroke"
-                                        stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-dasharray="1,5">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="map-icon icon-text">Map</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#profileDisplayPage">
-                    <div class="footerIcon-box">
-                        <div class="footer-icon margin-left-auto margin-right-auto">
-                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <title>User_icon</title>
-                                <desc>Created with Sketch.</desc>
-                                <g id="user_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <path class='profile-icon icon-stroke'
-                                        d="M21.5,4 C23.1587285,4 24.6916896,4.5384745 25.9336136,5.45015395 L28.4513041,4.4510659 L27.9044942,7.59504861 C28.5994938,8.7324805 29,10.0694686 29,11.5 C29,15.6421356 25.6421356,19 21.5,19 C17.3578644,19 14,15.6421356 14,11.5 C14,10.3937905 14.239491,9.34351716 14.6694525,8.39820059 L14,4 L17.2042442,5.35132626 C18.420962,4.49968828 19.9021268,4 21.5,4 Z"
-                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
-                                    <path class='profile-icon icon-stroke'
-                                        d="M33.7476556,48.0009122 C30.9119101,51.6511971 26.4802512,54 21.5,54 C16.5197488,54 12.0880899,51.6511971 9.25234442,48.0009122 Z M21.5,23 C30.0604136,23 37,29.9395864 37,38.5 C37,38.6674171 36.9973457,38.8342142 36.992077,39.0003516 L6.007923,39.0003516 C6.00265426,38.8342142 6,38.6674171 6,38.5 C6,29.9395864 12.9395864,23 21.5,23 Z"
-                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
-                                    <path class='profile-icon icon-stroke'
-                                        d="M37,39 C40,39 40.75,37 39.25,33 C37,27 36.4375,26 37.5625,22" id="Path"
-                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="profile-icon icon-text">Profile</div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </script>
 </body>
 
 </html>
