@@ -12,7 +12,7 @@
 :root {
     /* Height */
     --header-height: 3rem;
-    --footer-height: 4.25rem;
+    --footer-height: 3rem;
 
     /* Color Basic */
     --colorBasic-Black: #222222;
@@ -131,9 +131,13 @@ img {
     font-weight: bold;
     color: var(--colorScheme-Cinnamon);
     border-radius: 1.5rem;
-    background-color: var(--colorScheme-Orange);
+    background-color: var(--colorScheme-Fawn);
     border: none;
     padding: .5rem 1rem;
+}
+
+.submit-button:focus {
+    outline: none;
 }
 
 .container-hundred {
@@ -303,7 +307,7 @@ img {
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px solid var(--colorScheme-Orange);
+    border-bottom: 2px solid var(--colorScheme-Fawn);
 }
 
 .form-label {
@@ -317,7 +321,7 @@ img {
 }
 
 input[type="text"].form-input {
-    color: var(--colorScheme-Fawn);
+    color: var(--colorScheme-Orange);
     padding-top: 15px;
     font-size: 1.2em;
     display: block;
@@ -331,7 +335,7 @@ input[type="text"].form-input.error {
 
 input[type="text"].form-input:focus~label,
 input[type="text"].form-input:valid~label {
-    color: var(--colorScheme-Orange);
+    color: var(--colorScheme-Fawn);
 
 }
 
@@ -765,6 +769,35 @@ textarea {
     width: 33%;
 }
 
+.ranking-box h6 {
+    color: var(--colorScheme-Eborry);
+    margin-bottom: .2rem;
+}
+
+.list-container {
+    margin-top: 1.5rem;
+}
+
+.list-box {
+    width: 100%;
+    font-size: 1.1em;
+    padding-top: .8rem;
+    padding-bottom: .2rem;
+    color: var(--colorScheme-Lavender);
+    border-bottom: 2px solid var(--colorScheme-Lavender);
+}
+
+.btn-logout {
+    width: 80%;
+    margin-top: 1.3rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--colorScheme-Cinnamon);
+    background-color: var(--colorScheme-Fawn);
+}
+
 /* Old Profile Page */
 /* .profile-box {
     width: 80%;
@@ -832,18 +865,18 @@ textarea {
 
 /*Footer*/
 .footerIcon-box {
-    padding-top: .25rem;
     padding-bottom: .25rem;
 }
 
 .footer-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .icon-text {
     font-size: .625em;
-    line-height: 2rem;
+    line-height: 1rem;
+    margin-top: 0.3rem;
 }
 
 .icon-text.active {

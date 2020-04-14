@@ -14,3 +14,34 @@ const query = (options) => {
 const templater = f => a =>
     (Array.isArray(a) ? a : [a])
     .reduce((r, o, i, a) => r + f(o, i, a), "");
+
+const getString = function (data, type) {
+    if (type === "type") {
+        switch (data) {
+            case 0:
+                return "Feral";
+                break;
+            case 1:
+                return "Pet";
+                break;
+        }
+    } else {
+        switch (data) {
+            case 0:
+                return "Public";
+                break;
+            case 1:
+                return "Private";
+                break;
+        }
+    }
+}
+
+const getDate = (date) => {
+    let dt = new Date(date);
+    return dt.getFullYear() + '-' + twoDigit(dt.getMonth() + 1) + '-' + twoDigit(dt.getDate());
+}
+
+const twoDigit = (num) => {
+    return num > 9 ? num : "0" + num;
+}

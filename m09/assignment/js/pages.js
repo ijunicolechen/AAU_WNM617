@@ -37,3 +37,29 @@ const showCollectionPage = async (filter) => {
     $("#collectPage .collection-list")
         .html(makeCollectionList(d.result));
 }
+
+const showProfilePage = async () => {
+    let d = await query({
+        type: 'user_by_id',
+        params: [sessionStorage.userId]
+    });
+
+    //console.log(d);
+
+    $("#profileDisplayPage .user-container")
+        .html(makeProfileList(d.result));
+}
+
+const showCatInfoPage = async () => {
+    let di = await query({
+        type: 'cat_by_id_image',
+        params: [sessionStorage.catId]
+    })
+    let dc = await query({
+        type: 'cat_by_id',
+        params: [sessionStorage.catId]
+    })
+
+    $("#profileDisplayPage .user-container")
+        .html(makeCatInfoList(dc.result, di.result));
+}
