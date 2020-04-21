@@ -14,6 +14,7 @@ $(() => {
                     showBreedPage();
                     break;
                 case 'collectPage':
+                    console.log($('.collection-filter.active').data('name'));
                     showCollectionPage($('.collection-filter.active').data('name'));
                     break;
                 case 'profileDisplayPage':
@@ -66,6 +67,7 @@ $(() => {
     $('.collection-filter').on('click', function (e) {
         if (!$(this).hasClass('active')) {
             $(this).addClass('active').siblings('li').removeClass('active');
+            console.log($(this));
             showCollectionPage($(this).data('name'));
         }
     });

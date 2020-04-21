@@ -80,7 +80,7 @@ function makeStatement($c,$t,$p) {
 		*/
 		//Fetch all of the cat information by type
 		case "cat_collection_type":
-			return makeQuery($c,"SELECT c.*, Top 1 (i.*), b.b_name FROM `cat_collection` c JOIN `cat_image` i ON c.a_id = i.i_aid JOIN `cat_breed` b ON c.a_bid = b.b_id WHERE c.a_type = ? GROUP BY c.a_id","i",$p);
+			return makeQuery($c,"SELECT c.*, i.*, b.b_name FROM `cat_collection` c JOIN `cat_image` i ON c.a_id = i.i_aid JOIN `cat_breed` b ON c.a_bid = b.b_id WHERE c.a_type = ? GROUP BY c.a_id","i",$p);
 		//Fetch a specific cat information by a_id
 		case "cat_from_collection":
 			return makeQuery($c,"SELECT * FROM `cat_collection` RIGHT JOIN `cat_image` ON cat_image.i_aid = cat_collection.a_id WHERE a_id = ? ORDER BY cat_image.i_id DESC","i",$p);
