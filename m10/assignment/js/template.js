@@ -51,6 +51,101 @@ const makeCollectionList = templater(o => `
 </div>
 `);
 
+const makeCatInfoPage = templater(o =>`
+<div class="display-box">
+                    <div class="outline-imagebox">
+                        <div class="image-container">
+                            <div class="info-nav">
+                                <nav class="nav-bar">
+                                    <ul class="display-flex">
+                                        <li class="flex-none"><a href="#back" data-rel="back"></a></li>
+                                        <li class="flex-stretch"></li>
+                                        <li class="flex-none">Edit</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="cat-image">
+                                <img class="active" src="img/collection/cali_01.JPG" alt="cali_01">
+                                <img src="img/collection/cali_02.JPG" alt="cali_02">
+                            </div>
+                            <div class="button-circle display-flex">
+                                <span id="circle1" class="circle active"></span>
+                                <span id="circle2" class="circle"></span>
+                                <span id="circle3" class="circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display-bgc detail-cat">
+                       <div class="only-scrolling">
+                            <div class="detail-container">
+                                <div class="cat-detailInfo">
+                                    <h1>${o.a_name}</h1>
+                                    <p>${o.b_name} / ${getString(o.a_type, "type")}</p>
+                                    <p>${o.a_area}</p>
+                                </div>
+                            </div>
+                            <div class="detail-container">
+                                <div class="info-map"></div>
+                            </div>
+                            <div class="detail-container">
+                                <div class="detail-title">Personality :</div>
+                                <div class="detail-chartBox">
+                                    <div class="detail-pieChart">
+                                        <div class="svg-ringcontainer">
+                                            <div class="svg-ring">
+                                                <svg viewBox="0 0 36 36">
+                                                    <path class="progress-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#444" ; stroke-width="2" ; stroke-dasharray="${o.a_cling}, 100" />
+                                                </svg>
+                                            </div>
+                                            <div class="chart-info">
+                                                <span>${o.a_cling}%</span>
+                                                <span>Clingy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-pieChart">
+                                        <div class="svg-ringcontainer">
+                                            <div class="svg-ring">
+                                                <svg viewBox="0 0 36 36">
+                                                    <path class="progress-ring"
+                                                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                                                        stroke="#444" ; stroke-width="2" ; stroke-dasharray="${o.a_independent}, 100" />
+                                                </svg>
+                                            </div>
+                                            <div class="chart-info">
+                                                <span>${o.a_independent}%</span>
+                                                <span>Independent</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-pieChart">
+                                        <div class="svg-ringcontainer">
+                                            <div class="svg-ring">
+                                                <svg viewBox="0 0 36 36">
+                                                    <path class="progress-ring"
+                                                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                                                        stroke="#444" ; stroke-width="2" ; stroke-dasharray="${o.a_fierce}, 100" />
+                                                </svg>
+                                            </div>
+                                            <div class="chart-info">
+                                                <span>${o.a_fierce}%</span>
+                                                <span>Fierce</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail-container">
+                                <div class="detail-title">About :</div>
+                                <p class="detail-about">
+                                    ${o.a_description}
+                                </p>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+`)
+
 const makeProfileList = templater(o => ` <div class="profile-imgBox margin-left-auto margin-right-auto">
                             <img src="${o.u_img}" alt="I-Chen">
                         </div>

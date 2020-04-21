@@ -15,7 +15,7 @@ const templater = f => a =>
     (Array.isArray(a) ? a : [a])
     .reduce((r, o, i, a) => r + f(o, i, a), "");
 
-const getString = function (data, type) {
+const getString = (data, type) => {
     if (type === "type") {
         switch (data) {
             case 0:

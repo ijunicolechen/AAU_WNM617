@@ -80,7 +80,7 @@ function makeStatement($c,$t,$p) {
 		*/
 		//Fetch all of the cat information by type
 		case "cat_collection_type":
-			return makeQuery($c,"SELECT c.*, Top 1 (i.*), b.b_name FROM `cat_collection` c JOIN `cat_image` i ON c.a_id = i.i_aid JOIN `cat_breed` b ON c.a_bid = b.b_id WHERE c.a_type = ? GROUP BY c.a_id","i",$p);
+			return makeQuery($c,"SELECT c.*, i.*, b.b_name FROM `cat_collection` AS c JOIN `cat_image` AS i ON c.a_id = i.i_aid JOIN `cat_breed` AS b ON c.a_bid = b.b_id WHERE c.a_type = ? GROUP BY c.a_id","i",$p);
 		//Fetch a specific cat information by a_id
 		case "cat_from_collection":
 			return makeQuery($c,"SELECT * FROM `cat_collection` RIGHT JOIN `cat_image` ON cat_image.i_aid = cat_collection.a_id WHERE a_id = ? ORDER BY cat_image.i_id DESC","i",$p);
@@ -92,11 +92,14 @@ function makeStatement($c,$t,$p) {
 			return makeQuery($c,"SELECT * FROM `cat_user` WHERE u_id = ?","i",$p);
 		//Fetch a specific cat information by a_id
 		case "cat_by_id":
-			return makeQuery($c,"SELECT * FROM `cat_collection` WHERE a_id = ?","i",$p);
+			return makeQuery($c,"SELECT * FROM `cat_collection` AS c LEFT JOIN (SELECT * FROM `cat_breed`) AS b ON c.a_bid = b.b_id WHERE a_id = ?","i",$p);
 		//Fetch a specific cat information by a_id
 		case "location_by_id":
 			return makeQuery($c,"SELECT * FROM `cat_location` WHERE l_id = ?","i",$p);
-
+		
+		//Fetch All of Recent Cat Location
+		case "recent_cat_location":
+			return makeQuery($c,"SELECT c.*, l.* FROM `cat_collection` AS c LEFT JOIN (SELECT * FROM `cat_location` ORDER BY l_create_date) AS l ON c.a_id = l.l_aid WHERE c.a_id ? GROUP BY l.l_aid","i",$p);
 			
 		//Fetch a user id that matches u_name and u_password
 		case "check_login":

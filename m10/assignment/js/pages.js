@@ -50,16 +50,40 @@ const showProfilePage = async () => {
         .html(makeProfileList(d.result));
 }
 
-const showCatInfoPage = async () => {
-    let di = await query({
-        type: 'cat_by_id_image',
-        params: [sessionStorage.catId]
-    })
-    let dc = await query({
-        type: 'cat_by_id',
-        params: [sessionStorage.catId]
-    })
 
-    $("#profileDisplayPage .user-container")
-        .html(makeCatInfoList(dc.result, di.result));
+
+const showcatsInfoPage = async () => {
+  // let di = await query({
+  //     type: 'cat_by_id_image',
+  //     params: [sessionStorage.catId]
+  // })
+ 
+  let dc = await query({
+    type: 'cat_by_id',
+    params: [sessionStorage.catId],
+  });
+  console.log(dc.result);
+  // $("#profileDisplayPage .user-container")
+  //     .html(makeCatInfoList(dc.result, di.result));
+  $('#catsInfoPage #catInfoBox').html(makeCatInfoPage(dc.result));
+};
+
+const showRecentPage = async () => {
+    let d = await query({
+        type: 'recent_animal_locations',
+        params: [sessionStorage.userId]
+    });
+
+    // console.log(d);
+
+    let map_el = await makeMap("#mapPage #googleMap");
+
+    makeMarkers(
+        map_el,
+        d.result.map(o => {
+            o.icon = o.img;
+            // o.icon = `img/icons/icon_${o.type}.svg`;
+            return o;
+        })
+    );
 }

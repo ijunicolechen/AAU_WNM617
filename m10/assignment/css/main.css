@@ -13,6 +13,7 @@
     /* Height */
     --header-height: 3rem;
     --footer-height: 3rem;
+    --nav-height: 2.5rem;
 
     /* Color Basic */
     --colorBasic-Black: #222222;
@@ -157,7 +158,15 @@ img {
     -ms-overflow-style: none;
 }
 
-.scrolling::-webkit-scrollbar {
+.only-scrolling {
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-style: none;
+    -ms-overflow-style: none;
+}
+
+.scrolling::-webkit-scrollbar,
+.only-scrolling::-webkit-scrollbar {
     display: none;
 }
 
@@ -448,6 +457,11 @@ input[type="text"].form-input:valid~label .content-text {
 
 /* Breed & Collection Page */
 
+.nav-bar ul {
+    list-style: none;
+
+}
+
 .nav-bar ul li {
     text-align: center;
 }
@@ -592,7 +606,7 @@ input[type="text"].form-input:valid~label .content-text {
 .collection-infoBox {
     width: 45%;
     height: 100%;
-    padding: 30px 5px 10px 15px;
+    padding: 20px 5px 10px 15px;
     color: black;
 }
 
@@ -662,30 +676,180 @@ textarea {
 
 /* Cat Info */
 
-.img-box {
-    height: 20rem;
-    width: 20rem;
-    margin-top: 1rem;
+.info-container {
+    background-color: var(--colorScheme-Lavender);
+}
+
+.outline-imagebox {
+    position: absolute;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    height: 38vh;
+
+}
+
+.info-nav {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.info-nav .nav-bar {
+    height: var(--nav-height);
+}
+
+.info-nav .nav-bar ul {
+    background-color: rgba(0, 0, 0, .3);
+    line-height: var(--nav-height);
+    padding: 0;
+    margin: 0;
+}
+
+.info-nav .nav-bar ul li:first-child a::after {
+    color: var(--colorBasic-White);
+    font-size: 2em;
+}
+
+.info-nav .nav-bar ul li:last-child {
+    color: var(--colorBasic-White);
+    font-size: 1.2em;
+}
+
+.cat-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.cat-image img {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.button-circle {
+    position: absolute;
+    height: fit-content;
+    width: 30%;
+    justify-content: space-evenly;
+    left: 50%;
+    margin-left: -50px;
+    bottom: 2rem;
+    z-index: 15;
+}
+
+.circle {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--colorBasic-White);
+    border-radius: 50%;
+}
+
+.circle.active {
+    background-color: var(--colorBasic-White);
+}
+
+.cat-image img.active {
+    display: block;
+}
+
+.detail-cat {
+    position: absolute;
+    width: 100%;
+    height: 65vh;
+    padding: 1.2rem;
+    bottom: 0;
+    background-color: var(--colorScheme-Lavender);
+    border-radius: 30px 30px 0px 0px;
+    z-index: 20;
+
+}
+
+.detail-container {
     margin-bottom: 1.5rem;
+    color: var(--colorScheme-Cinnamon);
 }
 
-.catInfo-box {
-    width: 85%;
+.detail-title {
+    font-size: .825em;
+    font-weight: bold;
+    color: var(--colorScheme-Eborry);
 }
 
-.title-box {
-    margin-bottom: 1rem;
+.cat-detailInfo h1 {
+    font-size: 2em;
 }
 
-.title-about {
-    color: var(--colorScheme-Orange);
-    font-size: 1em;
-    margin-bottom: .25rem;
+.detail-container .cat-detailInfo p {
+    margin: .2rem;
 }
 
-.title-box p {
-    font-size: 0.8125em;
-    color: var(--colorScheme-Lavender);
+.info-map {
+    width: 100%;
+    height: 15vh;
+}
+
+.detail-title{
+    font-size: 1.2em;
+    margin-bottom: .5rem;
+}
+
+.detail-chartBox {
+    margin-top: .8rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.svg-ringcontainer {
+    position: relative;
+    padding: 10px;
+    background-color: var(--colorScheme-Fawn);
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 10px;
+}
+
+.svg-ring {
+    width: 5.5rem;
+    height: 5.5rem;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.progress-ring {
+    stroke: var(--colorScheme-Cinnamon);
+}
+
+.chart-info {
+    font-size: .825em;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.chart-info span {
+    width: 100%;
+}
+
+.chart-info span:last-child {
+    font-size: .5em;
+}
+
+.detail-about{
     margin: 0;
 }
 

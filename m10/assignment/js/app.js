@@ -19,11 +19,9 @@ $(() => {
                 case 'profileDisplayPage':
                     showProfilePage();
                     break;
-                    /*
-                    case "catsInfoPage":
-                        showcatsInfoPage();
-                        break;
-                    */
+                case "catsInfoPage":
+                    showcatsInfoPage();
+                    break;
             }
         })
 
@@ -39,6 +37,7 @@ $(() => {
             checkUserId();
         })
         .on('click', '.jump-catInfo', function (e) {
+            console.log("jump");
             if ($(this).data('id') == undefined) {
                 throw ("No id defined on this element!")
             }
