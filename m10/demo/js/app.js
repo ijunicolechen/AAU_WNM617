@@ -11,7 +11,7 @@ $(() => {
             console.log(ui.toPage[0].id)
             switch (ui.toPage[0].id) {
                 case "recent-page":
-                    // some code
+                    showRecentPage();
                     break;
                 case "list-page":
                     showListPage();

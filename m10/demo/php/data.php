@@ -15,7 +15,6 @@ function makeConn() {
 	return $c;
 }
 
-
 function fetchAll($r) {
 	$a = [];
 	while($row = $r->fetch_assoc())
@@ -27,26 +26,17 @@ function fetchAll($r) {
 // $c = connection, $ps = prepared statement, $st = statement type, $p = parameters
 function makeQuery($c,$ps,$st,$p) {
 	if($st!="" && $statement = @$c->prepare($ps)){
-			if(
-				@$statement->bind_param($st, ...$p) &&
-				@$statement->execute()
-			) {
-				try{
-					$r =fetchAll($statement->get_result());
-					//$r = $statement->bind_result($id);
-					
-				}
-				catch(Exception $e){
-					var_dump($e->getMessage());
-				}
-				
-				
-				return [
-					"params"=>$p,
-					"qry"=>$ps,
-					"result"=>$r
-				];
-			}
+		if(
+			@$statement->bind_param($st, ...$p) &&
+			@$statement->execute()
+		) {
+			$r = fetchAll($statement->get_result());
+			return [
+				"params"=>$p,
+				"qry"=>$ps,
+				"result"=>$r
+			];
+		}
 	} else {
 		$r = $c->query($ps);
 		if(!$c->errno) return [
@@ -54,12 +44,10 @@ function makeQuery($c,$ps,$st,$p) {
 			"result"=>fetchAll($r)
 		];
 	}
-	
 	return [
 		"qry"=>$ps,
 		"error"=>$c->error
 	];
-	
 }
 
 
@@ -93,6 +81,22 @@ function makeStatement($c,$t,$p) {
 			return makeQuery($c,"SELECT * FROM `track_animals` WHERE id = ?","i",$p);
 		case "location_by_id":
 			return makeQuery($c,"SELECT * FROM `track_locations` WHERE id = ?","i",$p);
+
+
+
+		case "recent_animal_locations":
+			return makeQuery($c,"SELECT
+				a.*, l.*
+				FROM `track_animals` AS a
+				LEFT JOIN (
+					SELECT aid,lat,lng,icon
+					FROM `track_locations`
+					ORDER BY `date_create` DESC
+				) AS l
+				ON a.id = l.aid
+				WHERE a.uid = ?
+				GROUP BY l.aid
+				","i",$p);
 
 
 		case "check_login":

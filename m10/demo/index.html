@@ -14,12 +14,17 @@
     <script src="lib/js/jquery-2.2.4.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/templates.js"></script>
     <script src="js/login.js"></script>
     <script src="js/pages.js"></script>
+    <script src="js/map.js"></script>
 
     <script src="js/app.js"></script>
 
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0inV_NBTlJ58jrlq3NOWnFRT9ckn42EI" async defer>
+     </script>
 </head>
 
 <body>
@@ -32,7 +37,6 @@
                     <div class="form-control">
                         <label class="form-label" for="login-username">Username</label>
                         <label class="hotdog display-flex">
-                            <img src="img/edit.svg" alt="" class="icon">
                             <input class="flex-stretch" type="username" placeholder="Type your Username"
                                 data-role="none" id="login-username">
                         </label>
@@ -42,7 +46,6 @@
                         <label class="hotdog display-flex">
                             <input class="flex-stretch" type="password" placeholder="Type your Password"
                                 data-role="none" id="login-password">
-                            <img src="img/edit.svg" alt="" class="icon">
                         </label>
                     </div>
                     <div class="form-control">
@@ -89,10 +92,7 @@
             <h1>Recent Locations</h1>
         </header>
         <div data-role="main">
-
-            <div class="marker" data-toggle="#recent-page .basin">
-                <img src="img/marker.svg" alt="">
-            </div>
+            <div class="map"></div>
 
             <div class="nav-air circle bottom right">
                 <a href="#">+</a>
@@ -116,60 +116,7 @@
         </header>
         <div data-role="main">
             <div class="scrollable">
-                <!-- ul>li*10>{Dog $} -->
-                <ul class="animallist">
-                    <!-- li.animallist-item*10>a[href="#animal-profile-page"].display-flex>(div.flex-none.animallist-image>img[src="https://via.placeholder.com/300?text=Dog $"])+div.flex-stretch.animallist-title>{Dog $} -->
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 1" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 1</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 2" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 2</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 3" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 3</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 4" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 4</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 5" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 5</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 6" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 6</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 7" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 7</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 8" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 8</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 9" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 9</div>
-                        </a></li>
-                    <li class="animallist-item"><a href="#animal-profile-page" class="display-flex">
-                            <div class="flex-none animallist-image"><img
-                                    src="https://via.placeholder.com/300?text=Dog 10" alt=""></div>
-                            <div class="flex-stretch animallist-title">Dog 10</div>
-                        </a></li>
-                </ul>
+                <ul class="animallist"></ul>
             </div>
         </div>
         <footer data-role="footer" data-template="#footer-nav-template"></footer>
@@ -222,27 +169,16 @@
             </ul>
         </header>
         <div data-role="main">
-            Animal Profile
+            <div class="profile-content"></div>
+            <div class="profile-map">
+                <div class="map"></div>
+            </div>
         </div>
     </section>
 
     <section data-role="page" id="profile-page">
         <div data-role="main">
-            <div class="profile-head">
-                <div class="profile-image">
-                    <img src="https://via.placeholder.com/400?text=Profile" alt="">
-                </div>
-            </div>
-            <div class="profile-body">
-                <div class="profile-name">Raphael Jumanji</div>
-                <div class="profile-description">
-                    information
-                </div>
-
-                <div>
-                    <a href="#" class="js-logout ui-link">Logout</a>
-                </div>
-            </div>
+            <div class="profile-content"></div>
             <div class="nav-air top right">
                 <a href="#profile-edit-page">
                     <img src="img/edit.svg" alt="" class="icon">
