@@ -19,6 +19,9 @@ $(() => {
                 case "animal-profile-page":
                     showAnimalPage();
                     break;
+                case "add-location-page":
+                    showAddLocationPage();
+                    break;
                 case "profile-page":
                     showUserPage();
                     break;
@@ -44,6 +47,16 @@ $(() => {
                 throw ("No id defined on this element");
             }
             sessionStorage.animalId = $(this).data("id");
+        })
+
+        .on("click", ".nav-tabs a", function (e) {
+            let id = $(this).parent().index();
+            $(this).parent().addClass("active")
+                .siblings().removeClass("active");
+
+            $(this).parent().parent().parent().next().children()
+                .eq(id).addClass("active")
+                .siblings().removeClass("active")
         })
 
 

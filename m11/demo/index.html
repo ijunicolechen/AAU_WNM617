@@ -95,7 +95,7 @@
             <div class="map"></div>
 
             <div class="nav-air circle bottom right">
-                <a href="#">+</a>
+                <a href="#recent-add-choice-page">+</a>
             </div>
         </div>
         <div class="basin">
@@ -103,6 +103,123 @@
         </div>
         <footer data-role="footer" data-template="#footer-nav-template"></footer>
     </section>
+
+
+
+
+
+
+
+
+    <section data-role="page" id="recent-add-choice-page">
+        <header data-role="header">
+            <h1>Choose Animal</h1>
+            <ul>
+                <li class="flex-none">
+                    <a href="#" data-rel="back">Cancel</a>
+                </li>
+                <li class="flex-stretch"></li>
+                <li class="flex-none">
+                    <a href="#add-location-page">Next</a>
+                </li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <a href="#add-animal-page">Add New Animal</a>
+            <br>
+            Or
+            <br>
+            <select name="" id="" class="form-input">
+                <option value="">Cat 1</option>
+                <option value="">Cat 2</option>
+                <option value="">Cat 3</option>
+            </select>
+        </div>
+    </section>
+
+
+    <section data-role="page" id="add-animal-page">
+        <header data-role="header">
+            <h1>Add New Animal</h1>
+            <ul>
+                <li class="flex-none">
+                    <a href="#" data-rel="back">Cancel</a>
+                </li>
+                <li class="flex-stretch"></li>
+                <li class="flex-none">
+                    <a href="#add-location-page">Next</a>
+                </li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <form data-ajax="false" id="recent-add-form">
+                <div class="form-control">
+                    <label class="form-label" for="recent-add-name">Name</label>
+                    <input class="form-input" type="text" placeholder="Animal Name" data-role="none"
+                        id="recent-add-name">
+                </div>
+                <div class="form-control">
+                    <label class="form-label" for="recent-add-type">Type</label>
+                    <select class="form-button" id="recent-add-type" data-role="none">
+                        <option>Dog</option>
+                        <option>Cat</option>
+                        <option>Horse</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label class="form-label" for="recent-add-breed">Breed</label>
+                    <input class="form-input" type="text" placeholder="Animal Breed" data-role="none"
+                        id="recent-add-breed">
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <section data-role="page" id="add-location-page">
+        <header data-role="header">
+            <h1>Choose Location</h1>
+            <ul>
+                <li class="flex-none">
+                    <a href="#" data-rel="back">Cancel</a>
+                </li>
+                <li class="flex-stretch"></li>
+                <li class="flex-none">
+                    <a href="#add-description-page">Next</a>
+                </li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <div class="map"></div>
+
+            <div class="marker">
+                <img src="img/marker.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section data-role="page" id="add-description-page">
+        <header data-role="header">
+            <h1>Location Description</h1>
+            <ul>
+                <li class="flex-none">
+                    <a href="#" data-rel="back">Cancel</a>
+                </li>
+                <li class="flex-stretch"></li>
+                <li class="flex-none">
+                    <a href="#list-page">Finish</a>
+                </li>
+            </ul>
+        </header>
+        <div data-role="main">
+            Description Form
+        </div>
+    </section>
+
+
+
+
 
     <section data-role="page" id="list-page">
         <header data-role="header">
@@ -169,9 +286,22 @@
             </ul>
         </header>
         <div data-role="main">
-            <div class="profile-content"></div>
-            <div class="profile-map">
-                <div class="map"></div>
+            <div class="profile-top"></div>
+            <nav class="profile-nav nav-tabs">
+                <ul>
+                    <li class="active"><a href="#">Locations</a></li>
+                    <li><a href="#">Description</a></li>
+                </ul>
+            </nav>
+            <div class="profile-bottom">
+                <div class="profile-map active">
+                    <div class="map"></div>
+
+                    <div class="nav-air circle bottom right">
+                        <a href="#add-location-page">+</a>
+                    </div>
+                </div>
+                <div class="profile-description"></div>
             </div>
         </div>
     </section>
