@@ -75,6 +75,7 @@ const setMapBounds = (map, locs) => {
     if (locs.length == 0) {
         if (window.location.protocol !== "https:") return;
         else {
+            
             navigator.geolocation.getCurrentPosition(p => {
                 let pos = {
                     lat: p.coords.latitude,

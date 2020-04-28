@@ -102,7 +102,7 @@ function makeStatement($c,$t,$p) {
 		
 		//Fetch All of Recent Cat Location
 		case "recent_cat_locations":
-			return makeQuery($c,"SELECT c.*, l.* FROM `cat_collection` AS c LEFT JOIN (SELECT * FROM `cat_location` ORDER BY l_create_date) AS l ON c.a_id = l.l_aid WHERE c.a_uid = ? GROUP BY l.l_aid","i",$p);
+			return makeQuery($c,"SELECT c.*, l.*,b.b_name FROM `cat_collection` AS c JOIN (SELECT * FROM `cat_location` ORDER BY l_create_date) AS l JOIN (SELECT * FROM `cat_breed`) AS b ON c.a_id = l.l_aid AND c.a_bid = b.b_id WHERE c.a_uid = ? GROUP BY l.l_aid","i",$p);
 			
 		//Fetch a user id that matches u_name and u_password
 		case "check_login":

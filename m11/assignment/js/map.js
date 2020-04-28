@@ -16,6 +16,12 @@ const makeMap = async (target) => {
                 disableDefaultUI: true,
                 styles: mapStylesDark
             })
+        )
+        .data(
+            "infoWindow",
+            new google.maps.InfoWindow({
+                content: ''
+            })
         );
 
     return map_el;
@@ -32,7 +38,6 @@ const makeMarkers = (map_el, locs) => {
     markers = [];
     locs.forEach((o, i, a) => {
         if (!o.l_lat) return;
-        console.log(o.l_lat);
         let m = new google.maps.Marker({
             position:{lat:o.l_lat,lng:o.l_lng},
             map: map,
@@ -54,7 +59,6 @@ const makeMarkers = (map_el, locs) => {
 }
 const setMapBounds = (map, locs) => {
     if (locs.length == 1) {
-         console.log(locs[0]);
          let pos={
             lat: locs[0].l_lat,
             lng: locs[0].l_lng
@@ -83,7 +87,11 @@ const setMapBounds = (map, locs) => {
     } else {
         let bounds = new google.maps.LatLngBounds(null);
         locs.forEach(o => {
-            if (o.l_lat) bounds.extend(o);
+            let pos = {
+                lat: o.l_lat,
+                lng: o.l_lng
+            };
+            if (o.l_lat) bounds.extend(pos);
         });
         map.fitBounds(bounds);
     }

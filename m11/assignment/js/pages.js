@@ -4,8 +4,6 @@ const showBreedPage = async () => {
         type: 'cat_breed'
     });
 
-    //console.log(d);
-
     $("#breedPage .breed-list")
         .append()
         .html(makeBreedList(d.result));
@@ -13,7 +11,6 @@ const showBreedPage = async () => {
 
 const showCollectionPage = async (filter) => {
     let filterType, catType;
-    console.log(filter);
     switch (filter) {
         case 'ALL':
             filterType = "cat_collection_all";
@@ -43,7 +40,7 @@ const showProfilePage = async () => {
         params: [sessionStorage.userId]
     });
 
-    $("#profileDisplayPage .user-container")
+    $("#profileDisplayPage .profile-container")
         .html(makeProfileList(d.result));
 }
 const callCatImg = (id,target)=>{
@@ -51,9 +48,8 @@ const callCatImg = (id,target)=>{
          type: 'cat_by_id_image',
          params: [id]
      }).then(d => {
-         console.log(d.result.length);
          $(target).html(makeCatImagePage(d.result));
-         activeImage();
+         //activeImage();
          makeCatImageButton(d.result.length);
      })
 } 
@@ -95,7 +91,6 @@ const showMapPage = async () => {
         params: [sessionStorage.userId]
     });
     let cats = d.result.reduce((r,o)=>{
-        console.log(o.l_lat)
          //o.icon = o.img;
          o.l_icon = `img/maker/MapMarker.png`;
          
@@ -104,4 +99,15 @@ const showMapPage = async () => {
     },[])    
     let map_el = await makeMap("#mapPage #googleMap");
     makeMarkers(map_el,cats);
+
+    map_el.data("markers").forEach((o, i) => {
+        o.addListener("click", function (e) {
+            console.log(cats);
+            // example 2
+            map_el.data("infoWindow")
+                .open(map_el.data("map"), o);
+            map_el.data("infoWindow")
+                .setContent(makeRecentWindow(cats[i]));
+        })
+    });
 }
