@@ -15,7 +15,7 @@ const makeMap = async (target) => {
                 zoom: 12,
                 disableDefaultUI: true
             })
-        );
+        ).data("infoWindow", new google.maps.InfoWindow({content:''}));
 
     return map_el;
 }
@@ -30,6 +30,7 @@ const makeMarkers = (map_el, locs) => {
 
     markers = [];
     locs.forEach((o, i, a) => {
+        if(!o.lat) return;
         let m = new google.maps.Marker({
             position: o,
             map: map,
@@ -45,4 +46,37 @@ const makeMarkers = (map_el, locs) => {
     });
 
     map_el.data("markers", markers);
+    setTimeout(()=>setMapBounds(map,locs),1000);
+}
+
+// map = google map object
+const setMapBounds = (map, locs) =>{
+    if(locs.length==1){
+        map.setCenter(locs[o]);
+    }else if(locs.length==0){
+        if(window.location.protocol !== "https:") return;
+        else{
+            navigator.geolocation.getCurrentPosition(p=>{
+                let pos = {
+                    lat:p.coords.latitude,
+                    lng:p.coords.longitude
+                };
+                map.setCenter(pos);
+                map.setZoom(15);
+            },(...args)=>{
+                console.log("error?",args);
+            },{
+                enableHighAccuracy:false,
+                timeout:5000,
+                maximumAge:0
+            })
+        }
+    }else{
+        let bounds = new google.maps.LatLngBounds(null);
+        locs.forEach(o=>{
+            if(o.lat) bounds.extend(o);
+        })
+        map.fitBounds(bounds);
+    }
+    
 }

@@ -8,7 +8,7 @@ $(() => {
             console.log(ui.toPage[0].id);
             switch (ui.toPage[0].id) {
                 case 'mapPage':
-                    // some code
+                    showMapPage();
                     break;
                 case 'breedPage':
                     showBreedPage();
@@ -37,7 +37,7 @@ $(() => {
             checkUserId();
         })
         .on('click', '.jump-catInfo', function (e) {
-            console.log("jump");
+            
             if ($(this).data('id') == undefined) {
                 throw ("No id defined on this element!")
             }

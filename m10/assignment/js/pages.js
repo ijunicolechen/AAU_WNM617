@@ -32,7 +32,6 @@ const showCollectionPage = async (filter) => {
         params: [catType]
     });
 
-    //console.log(d);
 
     $("#collectPage .collection-list")
         .html(makeCollectionList(d.result));
@@ -43,8 +42,6 @@ const showProfilePage = async () => {
         type: 'user_by_id',
         params: [sessionStorage.userId]
     });
-
-    //console.log(d);
 
     $("#profileDisplayPage .user-container")
         .html(makeProfileList(d.result));
@@ -62,28 +59,24 @@ const showcatsInfoPage = async () => {
     type: 'cat_by_id',
     params: [sessionStorage.catId],
   });
-  console.log(dc.result);
   // $("#profileDisplayPage .user-container")
   //     .html(makeCatInfoList(dc.result, di.result));
   $('#catsInfoPage #catInfoBox').html(makeCatInfoPage(dc.result));
 };
 
-const showRecentPage = async () => {
+const showMapPage = async () => {
     let d = await query({
-        type: 'recent_animal_locations',
+        type: 'recent_cat_locations',
         params: [sessionStorage.userId]
     });
-
-    // console.log(d);
-
+    let cats = d.result.reduce((r,o)=>{
+        console.log(o.l_lat)
+         //o.icon = o.img;
+         o.icon = `img/maker/MapMarker.png`;
+         
+         if(o.l_lat) r.push(o);
+         return r;
+    },[])    
     let map_el = await makeMap("#mapPage #googleMap");
-
-    makeMarkers(
-        map_el,
-        d.result.map(o => {
-            o.icon = o.img;
-            // o.icon = `img/icons/icon_${o.type}.svg`;
-            return o;
-        })
-    );
+    makeMarkers(map_el,cats);
 }

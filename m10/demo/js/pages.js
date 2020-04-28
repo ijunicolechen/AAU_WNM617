@@ -76,13 +76,22 @@ const showRecentPage = async () => {
     // console.log(d);
 
     let map_el = await makeMap("#recent-page .map");
-
+    let animals = d.result.map(o => {
+        o.icon = o.img;
+        // o.icon = `img/icons/icon_${o.type}.svg`;
+        return o;
+    });
     makeMarkers(
         map_el,
-        d.result.map(o => {
-            o.icon = o.img;
-            // o.icon = `img/icons/icon_${o.type}.svg`;
-            return o;
-        })
+        animals
     );
+    map_el.data("markers").forEach((o,i)=>{
+        o.addListener("click",function(e){
+            //example 1
+            $("#recent-page .basin").toggleClass("active");
+            //example2
+            map_el.data("infoWindow").open(map_el.data("map"),o);
+            map_el.data("infoWindow").setContent(makeRecentWindow(animals[i]));
+        })
+    })
 }

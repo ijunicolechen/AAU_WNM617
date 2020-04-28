@@ -481,6 +481,24 @@ a {
     padding-bottom: 0.2em;
 }
 
+.recent-animal {
+    padding: 1em;
+}
+
+.recent-image {
+    margin-right: 0.5em;
+}
+
+.recent-image img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.recent-animal h2 {
+    margin: 0 0 0.5em;
+}
+
 
 
 
