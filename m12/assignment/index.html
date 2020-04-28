@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- svg ring : https://css-tricks.com/building-progress-ring-quickly/ -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mimi Stalker</title>
+    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="lib/js/jquery-2.2.4.min.js"></script>
+
+
+    <script src="js/function.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/pages.js"></script>
+
+    <script src="js/login.js"></script>
+    <script src="js/map.js"></script>
+
+
+    <script src="js/app.js"></script>
+    <!-- jQuery Mobile should be load after original-->
+    <script type="text/javascript" src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery-ui.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0inV_NBTlJ58jrlq3NOWnFRT9ckn42EI" async defer>
+    </script>
+</head>
+
+<body class="dark-theme">
+    <section data-role="page" id="loginPage">
+        <div data-role="main">
+            <div class="container  margin-left-auto margin-right-auto">
+                <div class="logo-img">
+                    <img src="img/icon/logo_text.svg">
+                </div>
+                <form class="form" id="loginForm">
+                    <div class="form-box display-flex">
+                        <div class="icon-box margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>User_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="user_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class='icon-stroke'
+                                        d="M21.5,4 C23.1587285,4 24.6916896,4.5384745 25.9336136,5.45015395 L28.4513041,4.4510659 L27.9044942,7.59504861 C28.5994938,8.7324805 29,10.0694686 29,11.5 C29,15.6421356 25.6421356,19 21.5,19 C17.3578644,19 14,15.6421356 14,11.5 C14,10.3937905 14.239491,9.34351716 14.6694525,8.39820059 L14,4 L17.2042442,5.35132626 C18.420962,4.49968828 19.9021268,4 21.5,4 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='icon-stroke'
+                                        d="M33.7476556,48.0009122 C30.9119101,51.6511971 26.4802512,54 21.5,54 C16.5197488,54 12.0880899,51.6511971 9.25234442,48.0009122 Z M21.5,23 C30.0604136,23 37,29.9395864 37,38.5 C37,38.6674171 36.9973457,38.8342142 36.992077,39.0003516 L6.007923,39.0003516 C6.00265426,38.8342142 6,38.6674171 6,38.5 C6,29.9395864 12.9395864,23 21.5,23 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='icon-stroke'
+                                        d="M37,39 C40,39 40.75,37 39.25,33 C37,27 36.4375,26 37.5625,22" id="Path"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="loginUser" data-role="none" autocomplete="off"
+                                required>
+                            <label class="form-label" for="loginUser">
+                                <span class="content-text">Username</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-box display-flex">
+                        <div class="icon-box  margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Password_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="passwordIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group" transform="translate(12.000000, 1.000000)" fill="#D8D8D8">
+                                        <path class="icon-fill"
+                                            d="M9.5,0 C11.6011899,0 13.543054,0.68215454 15.116211,1.83708219 L18.3049851,0.571350134 L17.6121244,4.55334363 C18.4926018,5.9941739 19,7.68783235 19,9.5 C19,14.7467051 14.7467051,19 9.5,19 C4.25329488,19 0,14.7467051 0,9.5 C0,8.09942295 0.30308622,6.76963548 0.847248441,5.57264781 L3.68594044e-14,3.64153152e-14 L4.0577756,1.71233361 C5.59912735,0.633194182 7.47561846,0 9.5,0 Z M9.5,2.53333333 C5.65241624,2.53333333 2.53333333,5.65241624 2.53333333,9.5 C2.53333333,13.3475838 5.65241624,16.4666667 9.5,16.4666667 C13.3475838,16.4666667 16.4666667,13.3475838 16.4666667,9.5 C16.4666667,5.65241624 13.3475838,2.53333333 9.5,2.53333333 Z"
+                                            id="Combined-Shape"></path>
+                                        <rect class="icon-fill" id="Rectangle" x="8" y="17" width="4" height="23"
+                                            rx="1.5"></rect>
+                                        <path class="icon-fill"
+                                            d="M12.5,32 L13.5,32 C14.3284271,32 15,32.6715729 15,33.5 L15,36.5 C15,37.3284271 14.3284271,38 13.5,38 L12.5,38 C11.6715729,38 11,37.3284271 11,36.5 L11,33.5 C11,32.6715729 11.6715729,32 12.5,32 Z"
+                                            id="Rectangle-Copy"
+                                            transform="translate(13.000000, 35.000000) rotate(-90.000000) translate(-13.000000, -35.000000) ">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="loginPass" data-role="none" autocomplete="off"
+                                required>
+                            <label class="form-label" for="loginPass">
+                                <span class="content-text">Password</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <div class="button-box">
+                    <button id="login" class="submit-button" type="submit" form="loginForm">Log In</button>
+                </div>
+                <div class="content-box">
+                    <a href="#forgetpassPage">
+                        <h4>Forget username/password?</h4>
+                    </a>
+                </div>
+                <div class="content-box bottom-box">
+                    <a href="#signupPage">
+                        <h4>Do not have an account? <span>Sign Up</span></h4>
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="signupPage">
+        <div data-role="main">
+            <div class="container margin-left-auto margin-right-auto">
+                <div class="logo-img">
+                    <img src="img/icon/logo_text.svg">
+                </div>
+                <form class="form" id="loginForm">
+                    <div class="form-box display-flex">
+                        <div class="icon-box margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Email_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="emailIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <polygon class="icon-fill" id="Triangle" fill="#D8D8D8"
+                                        points="8.18091808 7 11.3333333 12.6576519 5 12.6576519"></polygon>
+                                    <polygon class="icon-fill" id="Triangle-Copy" fill="#D8D8D8"
+                                        points="33.5279233 6.93196615 36.6803385 12.589618 30.3470052 12.589618">
+                                    </polygon>
+                                    <rect class="icon-stroke" id="Rectangle" stroke="#D8D8D8" stroke-width="2" x="2"
+                                        y="13" width="38" height="23" rx="1.5"></rect>
+                                    <line class="icon-stroke" x1="8.5" y1="13.5" x2="21.5" y2="23.5" id="Line"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+                                    <line class="icon-stroke" x1="21.5" y1="23.5" x2="33.5" y2="13.5" id="Line-2"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="square"></line>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="signupEmail" data-role="none" autocomplete="off"
+                                required>
+                            <label class="form-label" for="signupEmail">
+                                <span class="content-text">Email</span>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+                    <div class="form-box display-flex">
+                        <div class="icon-box margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>User_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="user_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class='icon-stroke'
+                                        d="M21.5,4 C23.1587285,4 24.6916896,4.5384745 25.9336136,5.45015395 L28.4513041,4.4510659 L27.9044942,7.59504861 C28.5994938,8.7324805 29,10.0694686 29,11.5 C29,15.6421356 25.6421356,19 21.5,19 C17.3578644,19 14,15.6421356 14,11.5 C14,10.3937905 14.239491,9.34351716 14.6694525,8.39820059 L14,4 L17.2042442,5.35132626 C18.420962,4.49968828 19.9021268,4 21.5,4 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='icon-stroke'
+                                        d="M33.7476556,48.0009122 C30.9119101,51.6511971 26.4802512,54 21.5,54 C16.5197488,54 12.0880899,51.6511971 9.25234442,48.0009122 Z M21.5,23 C30.0604136,23 37,29.9395864 37,38.5 C37,38.6674171 36.9973457,38.8342142 36.992077,39.0003516 L6.007923,39.0003516 C6.00265426,38.8342142 6,38.6674171 6,38.5 C6,29.9395864 12.9395864,23 21.5,23 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='icon-stroke'
+                                        d="M37,39 C40,39 40.75,37 39.25,33 C37,27 36.4375,26 37.5625,22" id="Path"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="signupUser" data-role="none" autocomplete="off"
+                                required>
+                            <label class="form-label" for="signupUser">
+                                <span class="content-text">Username</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-box display-flex">
+                        <div class="icon-box margin-top-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                <title>Password_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="passwordIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group" transform="translate(12.000000, 1.000000)" fill="#D8D8D8">
+                                        <path class="icon-fill"
+                                            d="M9.5,0 C11.6011899,0 13.543054,0.68215454 15.116211,1.83708219 L18.3049851,0.571350134 L17.6121244,4.55334363 C18.4926018,5.9941739 19,7.68783235 19,9.5 C19,14.7467051 14.7467051,19 9.5,19 C4.25329488,19 0,14.7467051 0,9.5 C0,8.09942295 0.30308622,6.76963548 0.847248441,5.57264781 L3.68594044e-14,3.64153152e-14 L4.0577756,1.71233361 C5.59912735,0.633194182 7.47561846,0 9.5,0 Z M9.5,2.53333333 C5.65241624,2.53333333 2.53333333,5.65241624 2.53333333,9.5 C2.53333333,13.3475838 5.65241624,16.4666667 9.5,16.4666667 C13.3475838,16.4666667 16.4666667,13.3475838 16.4666667,9.5 C16.4666667,5.65241624 13.3475838,2.53333333 9.5,2.53333333 Z"
+                                            id="Combined-Shape"></path>
+                                        <rect class="icon-fill" id="Rectangle" x="8" y="17" width="4" height="23"
+                                            rx="1.5"></rect>
+                                        <path class="icon-fill"
+                                            d="M12.5,32 L13.5,32 C14.3284271,32 15,32.6715729 15,33.5 L15,36.5 C15,37.3284271 14.3284271,38 13.5,38 L12.5,38 C11.6715729,38 11,37.3284271 11,36.5 L11,33.5 C11,32.6715729 11.6715729,32 12.5,32 Z"
+                                            id="Rectangle-Copy"
+                                            transform="translate(13.000000, 35.000000) rotate(-90.000000) translate(-13.000000, -35.000000) ">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="input-box margin-top-auto">
+                            <input class="form-input" type="text" id="signupPass" data-role="none" autocomplete="off"
+                                required>
+                            <label class="form-label" for="signupPass">
+                                <span class="content-text">Password</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <div class="button-box">
+                    <button class="submit-button">Sign Up</button>
+                </div>
+                <div class="content-box bottom-box">
+                    <a href="#loginPage">
+                        <h4>Already have an account? <span>Log In</span></h4>
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="forgetpassPage">
+        <div data-role="main">
+            <div class="container margin-left-auto margin-right-auto">
+                <div class="logo-img">
+                    <img src="img/icon/logo_text.svg">
+                </div>
+                <div class="form-container">
+                    <div class="forgetPass-text content-box">
+                        <h2 class="text-center">Password Assistance</h2>
+                        <p class="description-text">Enter the email address or mobile phone number associated with your
+                            Amazon account.</p>
+                    </div>
+                    <form class="form" id="loginForm">
+                        <div class="form-box display-flex">
+                            <div class="icon-box margin-top-auto ">
+                                <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                                    <title>Email_icon</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="Email_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Group" transform="translate(2.000000, 4.931966)">
+                                            <polygon class="icon-fill" id="Triangle" fill="#D8D8D8"
+                                                points="6.01350134 0.0680338542 9 6.06803385 3 6.06803385"></polygon>
+                                            <polygon class="icon-fill" id="Triangle-Copy" fill="#D8D8D8"
+                                                points="32.0135013 0.0680338542 35 6.06803385 29 6.06803385"></polygon>
+                                            <rect class="icon-stroke" id="Rectangle" stroke="#D8D8D8" stroke-width="2"
+                                                x="0" y="7.06803385" width="38" height="27" rx="1.5">
+                                            </rect>
+                                            <line class="icon-stroke" x1="6.5" y1="7.65894295" x2="19.5" y2="19.4771248"
+                                                id="Line" stroke="#D8D8D8" stroke-width="2" stroke-linecap="square">
+                                            </line>
+                                            <line class="icon-stroke" x1="19.5" y1="19.4771248" x2="31.5"
+                                                y2="7.65894295" id="Line-2" stroke="#D8D8D8" stroke-width="2"
+                                                stroke-linecap="square"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="input-box margin-top-auto">
+                                <input class="form-input" type="text" id="signupEmail" data-role="none"
+                                    autocomplete="off" required>
+                                <label class="form-label" for="signupEmail">
+                                    <span class="content-text">Email</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="button-box">
+                        <button class="submit-button">Continue</button>
+                    </div>
+                </div>
+                <div class="msg-container display-none">
+                    <div class="msg-box margin-left-auto margin-right-auto">
+                        <h2 class="text-center">Congratulations!</h2>
+                        <p>We send you your password to your email. <br>
+                            Please check your email.</p>
+                    </div>
+                </div>
+                <div class="content-box bottom-box">
+                    <a href="#loginPage">
+                        <h4>Remember your password? <span>Log In</span></h4>
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="mapPage">
+        <header data-role="header">
+            <h1>Latest Report</h1>
+            <ul>
+                <li class="flex-none"></li>
+                <li class="flex-stretch"></li>
+                <li class="flex-none" data-activate=".basin-search">
+                    <div class="search-img">
+                        <img src="img/icon/SearchBar.svg" alt="search">
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div class="basin-search">
+            <div class="display-flex search-container">
+                <div class="flex-stretch">
+                    <form id="searchForm" data-ajax="false">
+                        <label>
+                            <input id="mapSearch" type="search">
+                        </label>
+                    </form>
+                </div>
+                <div class="flex-none toggle-up" data-deactivate=".basin-search">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                        <title>toggleup</title>
+                        <desc>Created with Sketch.</desc>
+                        <g id="toggleup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline id="Path-2" stroke="#E9D0BC" stroke-width="3"
+                                transform="translate(21.000000, 21.000000) rotate(-180.000000) translate(-21.000000, -21.000000) "
+                                points="13 13 21.5333333 29 29 13"></polyline>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="search-result"></div>
+        </div>
+        <div data-role="main">
+            
+            <div id="googleMap"></div>
+            <div class="addCat-icon" data-activate=".add-choice">
+                    <div class="addCat-circle">
+                        <div class="addCat-plus"></div>
+                    </div>
+            </div>
+        </div>
+        <footer data-role="footer" data-template="#footer-nav-template">
+        </footer>
+        <div class="add-choice">
+            <nav class="nav-bar display-flex">
+                <ul>
+                    <li class="back-icon flex-none" data-deactivate=".add-choice"></li>
+                    <li class="flex-stretch">
+                    </li>
+                </ul>
+            </nav>
+            <div class="choice-container">
+                <a href="#breedPage">
+                    <div class="choice-box choice-new display-flex">Add A New Cat</div>
+                </a>
+                <a href="">
+                    <div class="choice-box choice-cats display-flex">Add Location to A Cat in Collection</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section>
+        
+    </section>
+    <section data-role="page" id="breedPage">
+        <header data-role="header">
+            <h1>Breed</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#back" data-rel="back"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="main">
+            <div class="breed-list box-container display-flex scrolling">
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="collectPage">
+        <header data-role="header">
+            <h1>Collection</h1>
+        </header>
+        <div data-role="main">
+            <div class="addCat-icon" data-activate=".add-choice">
+                    <div class="addCat-circle">
+                        <div class="addCat-plus"></div>
+                    </div>
+            </div>
+            <div class="box-container collection-filter">
+                <ul id="filterSelection">
+                    <li class="collection-filter active" data-name="ALL">ALL</li>
+                    <li class="collection-filter" data-name="FERAL">Feral</li>
+                    <li class="collection-filter" data-name="PET">PET</li>
+                </ul>
+            </div>
+            <div class="box-container collection-container collection-list display-flex scrolling">
+            </div>
+        </div>
+       
+        <footer data-role="footer" data-template="#footer-nav-template">
+        </footer>
+        <div class="add-choice">
+            <nav class="nav-bar display-flex">
+                <ul>
+                    <li class="back-icon flex-none" data-deactivate=".add-choice"></li>
+                    <li class="flex-stretch">
+                    </li>
+                </ul>
+            </nav>
+            <div class="choice-container">
+                <a href="#breedPage">
+                    <div class="choice-box choice-new">
+                        <div class="left-box"></div>
+                        <div class="right-box">Add A New Cat</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="choice-box choice-cats">
+                        <div class="left-box"></div>
+                        <div class="right-box">Add Location to A Cat in Collection</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="addcatPage">
+        <header data-role="header">
+            <h1>Add Cat</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li class="flex-none"><a href="#back" data-rel="back"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="main">
+            <div class="scrolling">
+                <div class="container margin-left-auto margin-right-auto">
+                    <div class="upload-box margin-left-auto margin-right-auto">
+                        <form class="catImg-form">
+                            <label for="uploadCatimg">Upload Photo</label>
+                            <input type="file" name="uploadCatimg" id="uploadCatimg" class="display-none"
+                                accept="image/*" data-role="none">
+                        </form>
+                    </div>
+                    <form class="info-content">
+                        <div class="form-box display-flex">
+                            <div class="input-box input-box-add margin-bottom-auto margin-top-auto">
+                                <input class="form-input" type="text" id="catName" data-role="none" required>
+                                <label class="form-label" for="catName">
+                                    <span class="content-text">Name</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-box display-flex">
+                            <div class="input-box input-box-add margin-bottom-auto margin-top-auto">
+                                <input class="form-input" type="text" id="catBreed" data-role="none" required>
+                                <label class="form-label" for="catBreed">
+                                    <span class="content-text">Breed</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-box form-textarea display-flex">
+                            <div class="textarea-box margin-bottom-auto margin-top-auto">
+                                <label for="catDescription">Description</label>
+                                <textarea data-role="none" name="catDescription" id="catDescription"
+                                    placeholder="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="button-box">
+                            <a href="#collectPage">
+                                <button id="Save" class="submit-button">Save</button>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="catsInfoPage">
+        <div data-role="main">
+            <div id="catInfoBox" class="info-container">
+                <div class="display-box">
+                    <div class="outline-imagebox">
+                        <div class="image-container">
+                            <div class="info-nav">
+                                <nav class="nav-bar">
+                                    <ul class="display-flex">
+                                        <li class="flex-none"><a href="#back" data-rel="back"></a></li>
+                                        <li class="flex-stretch"></li>
+                                        <li class="flex-none">Edit</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="cat-image display-flex">
+                            </div>
+                            <div class="button-circle display-flex">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display-bgc detail-cat">
+                    </div>
+                </div>
+            </div>
+            <div class="scrolling edit-bgc edit-cat">
+                <div class="img-box margin-left-auto margin-right-auto">
+                    <img src="img/collection/xiaoxiao_01.JPG" alt="My name is Ca li">
+                </div>
+                <div class="catInfo-box margin-left-auto margin-right-auto">
+                    <form class="form" id="profileForm" action="">
+                        <div class="form-box">
+                            <div class="input-box  margin-bottom-auto margin-top-auto">
+                                <input class="form-input" type="text" id="catBreed" data-role="none" value="Black" required>
+                                <label class="form-label" for="catBreed">
+                                    <span class="content-text">Breed</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="input-box  margin-bottom-auto margin-top-auto">
+                                <input class="form-input" type="text" id="catLocation" data-role="none" value="SOMA Square"
+                                    required>
+                                <label class="form-label" for="catLocation">
+                                    <span class="content-text">Location</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-textarea">
+                            <div class="textarea-box margin-bottom-auto margin-top-auto">
+                                <label for="catDescription">Description</label>
+                                <textarea data-role="none" name="catDescription" id="catDescription">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius cumque molestiae, laudantium
+                                            dolorum expedita, deserunt delectus, ab magni a quod ullam distinctio tempore ratione atque
+                                            esse asperiores. Veniam, quisquam repellat.
+                                            Cumque iste deleniti reprehenderit animi nam suscipit earum temporibus asperiores ipsa,
+                                            voluptatum officiis dolore sit amet adipisci, non neque, aperiam quae quibusdam ad dolores
+                                            voluptatibus. Repellat a dolorum quibusdam iste.
+                                        </textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="profile-btn button-box" data-deactivate="#catsInfoPage .edit-cat">
+                        <button class="submit-button">Save</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <section data-role="page" id="profileDisplayPage">
+        <header data-role="header">
+            <nav class="nav-bar">
+                <h1 class="ui-title" role="heading" aria-level="1">Profile</h1>
+            </nav>
+        </header>
+        <div data-role="main">
+            <div class="container-hundred display-bgc scrolling">
+                <div class="profile-container margin-left-auto margin-right-auto">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="profile-edit display-bgc">
+            <nav class="nav-bar display-flex">
+                <ul>
+                    <li class="back-icon flex-none after-dark" data-deactivate=".profile-edit"></li>
+                    <li class="flex-stretch"></li>
+                </ul>  
+            </nav>
+            <div class="edit-container margin-left-auto margin-right-auto">
+                <div class="uploadImg-box">
+                    <div class="upload-img margin-right-auto margin-left-auto">
+                        <img src="img/profile/i-chen.jpg">
+                    </div>
+                </div>
+                <div class="edit-infor">
+                    <div class="info-type">
+                        <form id="editUser-name">
+                            <div class="form-box form-edit display-flex">
+                                <div class="title-box margin-top-auto">
+                                    Name
+                                </div>
+                                <div class="edit-box margin-top-auto">
+                                    <input class="edit-form" type="text" id="editUserName" data-role="none">
+                                    <label class="edit-label" for="editUserName">
+                                        <span class="edit-text">Da Miao</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="info-type">
+                        <form id="editUser-birthday">
+                            <div class="form-box form-edit display-flex">
+                                <div class="title-box margin-top-auto">
+                                    Birthday
+                                </div>
+                                <div class="edit-box margin-top-auto">
+                                    <input class="edit-form" type="text" id="editUserBirthday" data-role="none">
+                                    <label class="edit-label" for="editUserBirthday">
+                                        <span class="edit-text">11/13/1980</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="info-type">
+                        <form id="editUser-city">
+                            <div class="form-box form-edit display-flex">
+                                <div class="title-box margin-top-auto">
+                                    City
+                                </div>
+                                <div class="edit-box margin-top-auto">
+                                    <input class="edit-form" type="text" id="editUserCity" data-role="none">
+                                    <label class="edit-label" for="editUserCity">
+                                        <span class="edit-text">San Franscisco</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="info-type">
+                        <form id="editUser-state">
+                            <div class="form-box form-edit display-flex">
+                                <div class="title-box margin-top-auto">
+                                    State
+                                </div>
+                                <div class="edit-box margin-top-auto">
+                                    <input class="edit-form" type="text" id="editUserState" data-role="none">
+                                    <label class="edit-label" for="editUserState">
+                                        <span class="edit-text">CA</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="profile-btn button-box" data-deactivate=".profile-edit">
+                    <button class="submit-button">Save</button>
+                </div>
+            </div>
+            
+        </div>
+        <footer data-role="footer" data-template="#footer-nav-template">
+        </footer>
+    </section>
+    <script type="text/template" id="footer-nav-template">
+        <ul>
+            <li>
+                <a href="#collectPage">
+                    <div class="footerIcon-box">
+                        <div class="footer-icon margin-left-auto margin-right-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>Collection_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Collection_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class='collection-icon icon-stroke'
+                                        d="M3.54441431,19.0990788 C2.81852856,16.8119242 2.81852856,14.5247697 3.54441431,13.7623848 C4.27030005,13 6.44795728,12.2376152 8.62561452,14.5247697 C10.8032717,16.8119242 10.077386,19.8614636 8.62561452,21.3862333 C7.17384303,22.911003 4.27030005,21.3862333 3.54441431,19.0990788 Z"
+                                        id="Path-4" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M11.6221878,10.7767542 C10.7926041,8.23547138 10.7926041,5.69418855 11.6221878,4.84709428 C12.4517715,4 14.9405226,3.15290572 17.4292737,5.69418855 C19.9180249,8.23547138 19.0884411,11.6238485 17.4292737,13.318037 C15.7701063,15.0122256 12.4517715,13.318037 11.6221878,10.7767542 Z"
+                                        id="Path-4-Copy" stroke="#D8D8D8" stroke-width="2"
+                                        transform="translate(15.000000, 9.000000) rotate(10.000000) translate(-15.000000, -9.000000) ">
+                                    </path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M23.6221878,10.7767542 C22.7926041,8.23547138 22.7926041,5.69418855 23.6221878,4.84709428 C24.4517715,4 26.9405226,3.15290572 29.4292737,5.69418855 C31.9180249,8.23547138 31.0884411,11.6238485 29.4292737,13.318037 C27.7701063,15.0122256 24.4517715,13.318037 23.6221878,10.7767542 Z"
+                                        id="Path-4-Copy-2" stroke="#D8D8D8" stroke-width="2"
+                                        transform="translate(27.000000, 9.000000) scale(1, -1) rotate(6.000000) translate(-27.000000, -9.000000) ">
+                                    </path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M32.5444143,20.0990788 C31.8185286,17.8119242 31.8185286,15.5247697 32.5444143,14.7623848 C33.2703001,14 35.4479573,13.2376152 37.6256145,15.5247697 C39.8032717,17.8119242 39.077386,20.8614636 37.6256145,22.3862333 C36.173843,23.911003 33.2703001,22.3862333 32.5444143,20.0990788 Z"
+                                        id="Path-4-Copy-3" stroke="#D8D8D8" stroke-width="2"
+                                        transform="translate(35.500000, 18.500000) rotate(49.000000) translate(-35.500000, -18.500000) ">
+                                    </path>
+                                    <path class='collection-icon icon-stroke'
+                                        d="M16,38 C12,40.0155712 4,39.0155712 10,26.0155712 C16,13.0155712 27,15.0155712 32,26.0155712 C37,37.0155712 29,40.0155712 25,38.0155712 C21,36.0155712 20,35.9844288 16,38 Z"
+                                        id="Path-3" stroke="#D8D8D8" stroke-width="2"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="collection-icon icon-text">Collection</div>
+                    </div>
+
+                </a>
+            </li>
+            <li>
+                <a href="#mapPage">
+                    <div class="footerIcon-box">
+                        <div class="footer-icon margin-left-auto margin-right-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>Map_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Map_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group" transform="translate(3.000000, 4.000000)" stroke="#D8D8D8"
+                                        stroke-linejoin="round" stroke-width="2">
+                                        <polygon id="Rectangle" class="map-icon collection icon-stroke" points="0 1 12 3 12 34 0 32">
+                                        </polygon>
+                                        <polygon id="Rectangle-Copy" class="map-icon collection icon-stroke" points="12 3 24 0 24 31 12 34">
+                                        </polygon>
+                                        <polygon id="Rectangle-Copy-2" class="map-icon collection icon-stroke"
+                                            points="24 0 37 2 37 33 24 31"></polygon>
+                                    </g>
+                                    <g id="Group-2" transform="translate(35.000000, 18.000000)" stroke="#D8D8D8"
+                                        stroke-width="0.3">
+                                        <circle id="Oval" class="map-icon icon-stroke"
+                                            transform="translate(1.891229, 3.902726) rotate(88.000000) translate(-1.891229, -3.902726) "
+                                            cx="1.89122944" cy="3.90272618" r="1"></circle>
+                                        <circle id="Oval-Copy" class="map-icon icon-stroke"
+                                            transform="translate(1.208912, 2.476387) rotate(88.000000) translate(-1.208912, -2.476387) "
+                                            cx="1.20891179" cy="2.47638729" r="1"></circle>
+                                        <circle id="Oval-Copy-2" class="map-icon icon-stroke"
+                                            transform="translate(2.622910, 2.501069) rotate(88.000000) translate(-2.622910, -2.501069) "
+                                            cx="2.62290996" cy="2.50106872" r="1"></circle>
+                                        <circle id="Oval-Copy-3" class="map-icon icon-stroke"
+                                            transform="translate(3.317568, 3.220409) rotate(88.000000) translate(-3.317568, -3.220409) "
+                                            cx="3.31756833" cy="3.22040852" r="1"></circle>
+                                        <circle id="Oval-Copy-4" class="map-icon icon-stroke"
+                                            transform="translate(3.292887, 4.634407) rotate(88.000000) translate(-3.292887, -4.634407) "
+                                            cx="3.2928869" cy="4.63440669" r="1"></circle>
+                                    </g>
+                                    <path d="M3,20 L15,26 map collection L27,18 L37,24" id="Path-5" class="map-icon icon-stroke"
+                                        stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-dasharray="1,5">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="map-icon icon-text">Map</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#profileDisplayPage">
+                    <div class="footerIcon-box">
+                        <div class="footer-icon margin-left-auto margin-right-auto">
+                            <svg viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>User_icon</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="user_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class='profile-icon icon-stroke'
+                                        d="M21.5,4 C23.1587285,4 24.6916896,4.5384745 25.9336136,5.45015395 L28.4513041,4.4510659 L27.9044942,7.59504861 C28.5994938,8.7324805 29,10.0694686 29,11.5 C29,15.6421356 25.6421356,19 21.5,19 C17.3578644,19 14,15.6421356 14,11.5 C14,10.3937905 14.239491,9.34351716 14.6694525,8.39820059 L14,4 L17.2042442,5.35132626 C18.420962,4.49968828 19.9021268,4 21.5,4 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='profile-icon icon-stroke'
+                                        d="M33.7476556,48.0009122 C30.9119101,51.6511971 26.4802512,54 21.5,54 C16.5197488,54 12.0880899,51.6511971 9.25234442,48.0009122 Z M21.5,23 C30.0604136,23 37,29.9395864 37,38.5 C37,38.6674171 36.9973457,38.8342142 36.992077,39.0003516 L6.007923,39.0003516 C6.00265426,38.8342142 6,38.6674171 6,38.5 C6,29.9395864 12.9395864,23 21.5,23 Z"
+                                        id="Combined-Shape" stroke="#D8D8D8" stroke-width="2"></path>
+                                    <path class='profile-icon icon-stroke'
+                                        d="M37,39 C40,39 40.75,37 39.25,33 C37,27 36.4375,26 37.5625,22" id="Path"
+                                        stroke="#D8D8D8" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="profile-icon icon-text">Profile</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </script>
+
+
+</body>
+
+</html>
