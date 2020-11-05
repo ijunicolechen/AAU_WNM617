@@ -7,10 +7,10 @@ error_reporting(E_ALL);
 
 // Connect to DB
 function makeConn() {
-	$host = "localhost";
-	$user = "yuyin617";
-	$pass = "lIxIHYPf4HHw";
-	$dbname = "wnm617Web";
+	$host = "";
+	$user = "";
+	$pass = "";
+	$dbname = "";
 
 	$c = new mysqli($host,$user,$pass,$dbname);
 	if($c->connect_errno) die($c->connect_error);
